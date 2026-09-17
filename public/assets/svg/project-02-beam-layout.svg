@@ -1,0 +1,507 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="35 45 970 735" width="100%" height="100%" role="img" aria-labelledby="p2-beam-title p2-beam-desc">
+  <title id="p2-beam-title">Project 02 — Structural Beam Layout Plan (3rd Floor Roof)</title>
+  <desc id="p2-beam-desc">Authoritative architectural and structural engineering beam layout plan of the 7-storied residential apartment building at Basundhara, Dhaka (Sheet A-02). Showing true stepped building perimeter, 12 RC columns, shear wall lift core, primary beams FB1 to FB13, cantilever beam CB, slab zones TH=5" and TH=6", stair void, and light court.</desc>
+
+  <style>
+    /* CSS Design System Tokens */
+    .ref-line { stroke: #94a3b8; stroke-width: 0.6; stroke-dasharray: 6 4; vector-effect: non-scaling-stroke; }
+    .grid-line { stroke: #cbd5e1; stroke-width: 0.6; stroke-dasharray: 6 4; vector-effect: non-scaling-stroke; }
+    .grid-bubble { fill: #f8fafc; stroke: #475569; stroke-width: 0.9; }
+    .grid-text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 10.5px; font-weight: 700; fill: #1e293b; text-anchor: middle; dominant-baseline: central; }
+
+    .perimeter-line { stroke: #0f172a; stroke-width: 1.8; fill: none; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+    .cantilever-zone { fill: #f8fafc; stroke: #64748b; stroke-width: 0.8; stroke-dasharray: 4 3; vector-effect: non-scaling-stroke; }
+
+    .beam-primary { fill: #ffffff; stroke: #0f172a; stroke-width: 1.4; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+    .beam-secondary { fill: #ffffff; stroke: #0284c7; stroke-width: 1.1; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+    
+    .column-body { fill: #0f172a; stroke: #0f172a; stroke-width: 1.2; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+    .wall-core-body { fill: #1e293b; stroke: #0f172a; stroke-width: 1.4; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+    
+    .slab-th5 { fill: #f8fafc; opacity: 0.7; stroke: #cbd5e1; stroke-width: 0.5; }
+    .slab-th6 { fill: #f1f5f9; opacity: 0.9; stroke: #94a3b8; stroke-width: 0.5; }
+    .slab-drop { fill: #f1f5f9; stroke: #94a3b8; stroke-width: 0.7; stroke-dasharray: 4 3; }
+    
+    .void-diagonal { stroke: #dc2626; stroke-width: 0.75; stroke-dasharray: 4 3; vector-effect: non-scaling-stroke; }
+    .void-boundary { fill: #fef2f2; stroke: #dc2626; stroke-width: 1.0; vector-effect: non-scaling-stroke; }
+    .stair-tread { stroke: #475569; stroke-width: 0.7; vector-effect: non-scaling-stroke; }
+    
+    .dim-line { stroke: #64748b; stroke-width: 0.65; vector-effect: non-scaling-stroke; }
+    .dim-ext { stroke: #94a3b8; stroke-width: 0.5; vector-effect: non-scaling-stroke; }
+    .dim-tick { stroke: #1e293b; stroke-width: 1.0; vector-effect: non-scaling-stroke; }
+    .dim-text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9.5px; fill: #334155; text-anchor: middle; }
+    .dim-text-vert { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9.5px; fill: #334155; text-anchor: middle; dominant-baseline: central; }
+    
+    .beam-label { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 8.5px; font-weight: 700; fill: #0f172a; }
+    .beam-label-vert { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 8.5px; font-weight: 700; fill: #0f172a; text-anchor: middle; }
+    .beam-size { font-size: 7.5px; font-weight: normal; fill: #475569; }
+    .slab-label { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9.5px; font-weight: 600; fill: #475569; text-anchor: middle; }
+    .void-label { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 10px; font-weight: 700; fill: #dc2626; text-anchor: middle; }
+    .title-text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; font-weight: 700; fill: #0f172a; }
+    .title-sub { font-size: 9px; font-weight: normal; fill: #64748b; }
+  </style>
+
+  <!-- ========================================== -->
+  <!-- 1. REFERENCE & SITE BASELINE (Stage 1)     -->
+  <!-- ========================================== -->
+  <g id="reference" class="scene-group">
+    <!-- Drawing Sheet Title & Scale -->
+    <g id="sheet-title-group" transform="translate(680, 760)">
+      <text class="title-text" x="0" y="0">3RD FLOOR ROOF BEAM LAYOUT PLAN</text>
+      <text class="title-sub" x="0" y="14">SHEET NO: A-02 • SCALE: 1:100 • RESIDENTIAL BUILDING</text>
+    </g>
+
+    <!-- Architectural North Indicator -->
+    <g id="north-arrow" transform="translate(955, 80)">
+      <circle cx="0" cy="0" r="16" fill="#f8fafc" stroke="#64748b" stroke-width="0.8" />
+      <polygon points="0,-13 4,0 0,-3 -4,0" fill="#0f172a" />
+      <polygon points="0,13 4,0 0,3 -4,0" fill="#cbd5e1" />
+      <text x="0" y="-17" font-family="ui-monospace, monospace" font-size="8.5" font-weight="700" fill="#0f172a" text-anchor="middle">N</text>
+    </g>
+
+    <!-- Structural Perimeter Stepped Footprint -->
+    <path id="perimeter-outer" class="perimeter-line" 
+          d="M 85.16 97.96 
+             L 624.08 97.96 
+             L 624.08 123.64 
+             L 914.96 123.64 
+             L 914.96 378.52 
+             L 750.08 378.52 
+             L 750.08 489.16 
+             L 949.64 489.16 
+             L 949.64 711.76 
+             L 85.16 711.76 Z" />
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 2. STRUCTURAL GRID (Stage 1)               -->
+  <!-- ========================================== -->
+  <g id="grid" class="scene-group">
+    <!-- Vertical Grid Lines (1 to 6) -->
+    <line id="grid-v1" class="grid-line" x1="85.16" y1="58" x2="85.16" y2="728" />
+    <line id="grid-v2" class="grid-line" x1="254.12" y1="58" x2="254.12" y2="728" />
+    <line id="grid-v3" class="grid-line" x1="361.52" y1="58" x2="361.52" y2="728" />
+    <line id="grid-v4" class="grid-line" x1="638.00" y1="58" x2="638.00" y2="728" />
+    <line id="grid-v5" class="grid-line" x1="852.92" y1="58" x2="852.92" y2="728" />
+    <line id="grid-v6" class="grid-line" x1="926.60" y1="58" x2="926.60" y2="728" />
+
+    <!-- Horizontal Grid Lines (A to E) -->
+    <line id="grid-ha" class="grid-line" x1="45" y1="97.96" x2="945" y2="97.96" />
+    <line id="grid-hb" class="grid-line" x1="45" y1="142.12" x2="945" y2="142.12" />
+    <line id="grid-hc" class="grid-line" x1="45" y1="421.60" x2="945" y2="421.60" />
+    <line id="grid-hd" class="grid-line" x1="45" y1="489.16" x2="965" y2="489.16" />
+    <line id="grid-he" class="grid-line" x1="45" y1="711.76" x2="965" y2="711.76" />
+
+    <!-- Grid Bubbles Top -->
+    <g id="bubble-v1" transform="translate(85.16, 55)">
+      <circle class="grid-bubble" cx="0" cy="0" r="10" />
+      <text class="grid-text" x="0" y="0">1</text>
+    </g>
+    <g id="bubble-v2" transform="translate(254.12, 55)">
+      <circle class="grid-bubble" cx="0" cy="0" r="10" />
+      <text class="grid-text" x="0" y="0">2</text>
+    </g>
+    <g id="bubble-v3" transform="translate(361.52, 55)">
+      <circle class="grid-bubble" cx="0" cy="0" r="10" />
+      <text class="grid-text" x="0" y="0">3</text>
+    </g>
+    <g id="bubble-v4" transform="translate(638.00, 55)">
+      <circle class="grid-bubble" cx="0" cy="0" r="10" />
+      <text class="grid-text" x="0" y="0">4</text>
+    </g>
+    <g id="bubble-v5" transform="translate(852.92, 55)">
+      <circle class="grid-bubble" cx="0" cy="0" r="10" />
+      <text class="grid-text" x="0" y="0">5</text>
+    </g>
+    <g id="bubble-v6" transform="translate(926.60, 55)">
+      <circle class="grid-bubble" cx="0" cy="0" r="10" />
+      <text class="grid-text" x="0" y="0">6</text>
+    </g>
+
+    <!-- Grid Bubbles Left -->
+    <g id="bubble-ha" transform="translate(48, 97.96)">
+      <circle class="grid-bubble" cx="0" cy="0" r="10" />
+      <text class="grid-text" x="0" y="0">A</text>
+    </g>
+    <g id="bubble-hb" transform="translate(48, 142.12)">
+      <circle class="grid-bubble" cx="0" cy="0" r="10" />
+      <text class="grid-text" x="0" y="0">B</text>
+    </g>
+    <g id="bubble-hc" transform="translate(48, 421.60)">
+      <circle class="grid-bubble" cx="0" cy="0" r="10" />
+      <text class="grid-text" x="0" y="0">C</text>
+    </g>
+    <g id="bubble-hd" transform="translate(48, 489.16)">
+      <circle class="grid-bubble" cx="0" cy="0" r="10" />
+      <text class="grid-text" x="0" y="0">D</text>
+    </g>
+    <g id="bubble-he" transform="translate(48, 711.76)">
+      <circle class="grid-bubble" cx="0" cy="0" r="10" />
+      <text class="grid-text" x="0" y="0">E</text>
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 3. STRUCTURAL COLUMNS & CORE (Stage 2)     -->
+  <!-- ========================================== -->
+  <g id="columns" class="scene-group">
+    <!-- Row 1 (North) -->
+    <rect id="col-c3" class="column-body" x="85.16" y="142.12" width="27.72" height="18.36" />
+    <rect id="col-c4" class="column-body" x="284.60" y="142.12" width="36.84" height="18.36" />
+    <rect id="col-c2" class="column-body" x="607.28" y="123.64" width="30.72" height="23.04" />
+    <rect id="col-c1" class="column-body" x="822.20" y="123.64" width="30.72" height="18.48" />
+
+    <!-- Row 2 (Middle) -->
+    <rect id="col-c5" class="column-body" x="85.16" y="418.60" width="30.72" height="18.36" />
+    <rect id="col-c6" class="column-body" x="232.64" y="418.60" width="36.84" height="18.36" />
+    <rect id="col-c7" class="column-body" x="619.52" y="475.36" width="18.48" height="36.84" />
+    <rect id="col-c8" class="column-body" x="895.88" y="489.16" width="30.72" height="18.48" />
+
+    <!-- Row 3 (South) -->
+    <rect id="col-c9" class="column-body" x="85.16" y="681.16" width="18.48" height="30.60" />
+    <rect id="col-c10" class="column-body" x="254.12" y="681.16" width="18.36" height="30.60" />
+    <rect id="col-c11" class="column-body" x="619.52" y="681.16" width="18.48" height="30.60" />
+    <rect id="col-c12" class="column-body" x="899.00" y="693.40" width="27.60" height="18.36" />
+
+    <!-- Reinforced Concrete Shear Wall / Lift Core (CAD Drawing #10) -->
+    <path id="wall-core" class="wall-core-body"
+          d="M 254.12 512.20 
+             L 376.88 512.20 
+             L 376.88 635.08 
+             L 254.12 635.08 Z
+             M 269.48 527.56 
+             L 269.48 619.72 
+             L 361.52 619.72 
+             L 361.52 527.56 Z" 
+          fill-rule="evenodd" />
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 4. PRIMARY & CANTILEVER BEAMS (Stage 3)    -->
+  <!-- ========================================== -->
+  <g id="beams" class="scene-group">
+    <!-- Longitudinal Primary Beams (Horizontal) -->
+    <!-- FB6: North Primary Beam -->
+    <g id="beam-fb6">
+      <rect class="beam-primary" x="85.16" y="142.12" width="552.84" height="15.24" />
+      <text class="beam-label" x="155" y="138">FB6<tspan class="beam-size">(10"X20")</tspan></text>
+      <text class="beam-label" x="435" y="138">FB6<tspan class="beam-size">(10"X20")</tspan></text>
+    </g>
+
+    <!-- FB7: North-East Stepped Primary Beam -->
+    <g id="beam-fb7">
+      <rect class="beam-primary" x="638.00" y="123.64" width="214.92" height="15.36" />
+      <text class="beam-label" x="715" y="119">FB7<tspan class="beam-size">(10"X20")</tspan></text>
+    </g>
+
+    <!-- FB8: Mid Longitudinal Primary Beam -->
+    <g id="beam-fb8">
+      <rect class="beam-primary" x="85.16" y="421.60" width="552.84" height="15.36" />
+      <text class="beam-label" x="145" y="417">FB8<tspan class="beam-size">(10"X20")</tspan></text>
+      <text class="beam-label" x="435" y="417">FB8<tspan class="beam-size">(10"X20")</tspan></text>
+    </g>
+
+    <!-- FB9: East Court North Edge Beam -->
+    <g id="beam-fb9">
+      <rect class="beam-primary" x="638.00" y="363.16" width="214.92" height="15.36" />
+      <text class="beam-label" x="710" y="358">FB9<tspan class="beam-size">(10"X20")</tspan></text>
+    </g>
+
+    <!-- FB10: East Court South Edge Beam -->
+    <g id="beam-fb10">
+      <rect class="beam-primary" x="638.00" y="489.16" width="288.60" height="15.36" />
+      <text class="beam-label" x="710" y="522">FB10<tspan class="beam-size">(10"X20")</tspan></text>
+    </g>
+
+    <!-- FB11: Lift Core North Tie Beam -->
+    <g id="beam-fb11">
+      <rect class="beam-primary" x="254.12" y="512.20" width="122.76" height="15.36" />
+      <text class="beam-label" x="285" y="507">FB11<tspan class="beam-size">(10"X20")</tspan></text>
+    </g>
+
+    <!-- FB13: South Main Spanning Beam -->
+    <g id="beam-fb13">
+      <rect class="beam-primary" x="85.16" y="696.52" width="841.44" height="15.24" />
+      <text class="beam-label" x="435" y="692">FB13<tspan class="beam-size">(10"X20")</tspan></text>
+      <text class="beam-label" x="735" y="692">FB13<tspan class="beam-size">(10"X20")</tspan></text>
+    </g>
+
+    <!-- Transverse Primary Beams (Vertical) -->
+    <!-- FB1: West Perimeter Beam -->
+    <g id="beam-fb1">
+      <rect class="beam-primary" x="85.16" y="142.12" width="15.36" height="569.64" />
+      <text class="beam-label-vert" x="118" y="295" transform="rotate(-90 118 295)">FB1(10"X20")</text>
+      <text class="beam-label-vert" x="118" y="565" transform="rotate(-90 118 565)">FB1(10"X20")</text>
+    </g>
+
+    <!-- FB2: Core West Flanking Beam -->
+    <g id="beam-fb2">
+      <rect class="beam-primary" x="254.12" y="418.60" width="15.36" height="293.16" />
+      <text class="beam-label-vert" x="246" y="470" transform="rotate(-90 246 470)">FB2(10"X20")</text>
+      <text class="beam-label-vert" x="246" y="650" transform="rotate(-90 246 650)">FB2(10"X20")</text>
+    </g>
+
+    <!-- FB12: Interior Transverse Beam & Core East Wall -->
+    <g id="beam-fb12">
+      <rect class="beam-primary" x="361.52" y="142.12" width="15.36" height="569.64" />
+      <text class="beam-label-vert" x="395" y="305" transform="rotate(-90 395 305)">FB12(10"X20")</text>
+      <text class="beam-label-vert" x="395" y="475" transform="rotate(-90 395 475)">FB12(10"X20")</text>
+      <text class="beam-label-vert" x="395" y="650" transform="rotate(-90 395 650)">FB12(10"X20")</text>
+    </g>
+
+    <!-- FB3: Central Transverse Spine Beam -->
+    <g id="beam-fb3">
+      <rect class="beam-primary" x="622.64" y="123.64" width="15.36" height="588.12" />
+      <text class="beam-label-vert" x="614" y="270" transform="rotate(-90 614 270)">FB3(10"X20")</text>
+      <text class="beam-label-vert" x="614" y="620" transform="rotate(-90 614 620)">FB3(10"X20")</text>
+    </g>
+
+    <!-- FB4: East North Transverse Beam -->
+    <g id="beam-fb4">
+      <rect class="beam-primary" x="837.56" y="123.64" width="15.36" height="365.52" />
+      <text class="beam-label-vert" x="828" y="295" transform="rotate(-90 828 295)">FB4(10"X20")</text>
+    </g>
+
+    <!-- FB5: East South Transverse Beam -->
+    <g id="beam-fb5">
+      <rect class="beam-primary" x="849.92" y="489.16" width="15.36" height="222.60" />
+      <text class="beam-label-vert" x="843" y="605" transform="rotate(-90 843 605)">FB5(10"X20")</text>
+    </g>
+
+    <!-- CB: Cantilever Secondary Beam along Light Court -->
+    <g id="beam-cb">
+      <rect class="beam-secondary" x="734.72" y="378.52" width="15.36" height="110.64" />
+      <text class="beam-label-vert" x="744" y="432" transform="rotate(-90 744 432)">CB(10"x6")</text>
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 5. SLAB REGIONS (Stage 4)                  -->
+  <!-- ========================================== -->
+  <g id="slabs" class="scene-group">
+    <!-- North Balcony / Front Cantilever (Drop / Beam Bottom Slab) -->
+    <path id="slab-cantilever-north" class="slab-drop"
+          d="M 85.16 97.96 
+             L 624.08 97.96 
+             L 624.08 123.64 
+             L 525.92 123.64 
+             L 525.92 142.12 
+             L 85.16 142.12 Z" />
+    <text class="slab-label" x="380" y="124" style="font-size:8.5px; fill:#475569;">beam bottom slab</text>
+
+    <!-- Northwest Living Slab (TH=6") -->
+    <rect id="slab-bay-nw" class="slab-th6" x="100.52" y="157.36" width="261.00" height="264.24" />
+    <text class="slab-label" x="231" y="290">TH=6"</text>
+
+    <!-- North-Center Slab (TH=5") -->
+    <rect id="slab-bay-nc" class="slab-th5" x="376.88" y="157.36" width="245.76" height="264.24" />
+    <text class="slab-label" x="500" y="290">TH=5"</text>
+
+    <!-- Northeast Bedroom Slab (TH=5") -->
+    <rect id="slab-bay-ne" class="slab-th5" x="638.00" y="139.00" width="199.56" height="224.16" />
+    <text class="slab-label" x="738" y="250">TH=5"</text>
+
+    <!-- Northeast Verandah / Balcony Slab (TH=5") -->
+    <rect id="slab-balcony-ne" class="slab-th5" x="852.92" y="123.64" width="62.04" height="254.88" />
+    <text class="slab-label" x="884" y="200">TH=5"</text>
+
+    <!-- Mid-West Bay Slab (TH=6") -->
+    <rect id="slab-bay-wm" class="slab-th6" x="100.52" y="436.96" width="132.12" height="75.00" />
+    <text class="slab-label" x="166" y="480">TH=6"</text>
+
+    <!-- Center Lounge Slab (TH=5") -->
+    <rect id="slab-bay-center" class="slab-th5" x="376.88" y="436.96" width="245.76" height="259.56" />
+    <text class="slab-label" x="500" y="555">TH=5"</text>
+
+    <!-- Court East Side Slab (TH=5") -->
+    <rect id="slab-bay-court-east" class="slab-th5" x="750.08" y="378.52" width="87.48" height="110.64" />
+    <text class="slab-label" x="794" y="435">TH=5"</text>
+
+    <!-- Southeast Bedroom Slab (TH=5") -->
+    <rect id="slab-bay-se" class="slab-th5" x="638.00" y="504.52" width="211.92" height="192.00" />
+    <text class="slab-label" x="744" y="600">TH=5"</text>
+
+    <!-- Southeast Balcony Slab (TH=5") -->
+    <rect id="slab-balcony-se" class="slab-th5" x="865.28" y="489.16" width="84.36" height="222.60" />
+    <text class="slab-label" x="907" y="610">TH=5"</text>
+
+    <!-- South Core Cantilever Slab (TH=6") -->
+    <rect id="slab-south-core" class="slab-th6" x="269.48" y="696.52" width="92.04" height="15.24" />
+    <text class="slab-label" x="315" y="708" style="font-size:7.5px;">TH=6"</text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 6. VOIDS & VERTICAL CIRCULATION (Stage 5)  -->
+  <!-- ========================================== -->
+  <g id="voids" class="scene-group">
+    <!-- LIGHT COURT VOID (CAD Drawing #16, #17) -->
+    <g id="void-shaft">
+      <rect class="void-boundary" x="638.00" y="378.52" width="112.08" height="110.64" />
+      <line class="void-diagonal" x1="638.00" y1="378.52" x2="750.08" y2="489.16" />
+      <line class="void-diagonal" x1="638.00" y1="489.16" x2="750.08" y2="378.52" />
+      <rect x="674" y="424" width="40" height="20" fill="#ffffff" rx="3" style="stroke:#dc2626; stroke-width:0.8;" />
+      <text class="void-label" x="694" y="438">VOID</text>
+    </g>
+
+    <!-- ELEVATOR / LIFT CORE SHAFT VOID (CAD Drawing #18, #19) -->
+    <g id="void-lift">
+      <rect class="void-boundary" x="269.48" y="527.56" width="92.04" height="92.16" />
+      <line class="void-diagonal" x1="269.48" y1="527.56" x2="361.52" y2="619.72" />
+      <line class="void-diagonal" x1="269.48" y1="619.72" x2="361.52" y2="527.56" />
+      <rect x="295" y="564" width="40" height="20" fill="#ffffff" rx="3" style="stroke:#dc2626; stroke-width:0.8;" />
+      <text class="void-label" x="315" y="578">LIFT</text>
+    </g>
+
+    <!-- STAIR CORE & VOID (CAD Drawing #20, #21, #2222) -->
+    <g id="void-stair">
+      <!-- Stair Well Void / Landing Opening -->
+      <rect class="void-boundary" x="100.52" y="511.96" width="153.60" height="184.56" />
+      <line class="void-diagonal" x1="100.52" y1="511.96" x2="254.12" y2="696.52" />
+      <line class="void-diagonal" x1="100.52" y1="696.52" x2="254.12" y2="511.96" />
+      <rect x="157" y="594" width="40" height="20" fill="#ffffff" rx="3" style="stroke:#dc2626; stroke-width:0.8;" />
+      <text class="void-label" x="177" y="608">STAIR</text>
+
+      <!-- Stair Flight Treads Zone adjacent to core (CAD #2222) -->
+      <g id="stair-flight">
+        <rect x="269.48" y="635.08" width="92.04" height="61.44" fill="#f8fafc" stroke="#475569" stroke-width="0.9" />
+        <line class="stair-tread" x1="269.48" y1="643.2" x2="361.52" y2="643.2" />
+        <line class="stair-tread" x1="269.48" y1="651.4" x2="361.52" y2="651.4" />
+        <line class="stair-tread" x1="269.48" y1="659.6" x2="361.52" y2="659.6" />
+        <line class="stair-tread" x1="269.48" y1="667.8" x2="361.52" y2="667.8" />
+        <line class="stair-tread" x1="269.48" y1="676.0" x2="361.52" y2="676.0" />
+        <line class="stair-tread" x1="269.48" y1="684.2" x2="361.52" y2="684.2" />
+        <line class="stair-tread" x1="269.48" y1="692.4" x2="361.52" y2="692.4" />
+        <line x1="315.50" y1="635.08" x2="315.50" y2="696.52" stroke="#475569" stroke-width="1.0" />
+      </g>
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 7. STRUCTURAL DIMENSIONS (Stage 6)         -->
+  <!-- ========================================== -->
+  <g id="annotations" class="scene-group">
+    <!-- Top Horizontal Dimensions (y=76.96) -->
+    <g id="dims-top">
+      <!-- 23'-11" (x: 85.16 to 525.92) -->
+      <line class="dim-line" x1="85.16" y1="76.96" x2="525.92" y2="76.96" />
+      <line class="dim-ext" x1="85.16" y1="71" x2="85.16" y2="97.96" />
+      <line class="dim-ext" x1="525.92" y1="71" x2="525.92" y2="97.96" />
+      <line class="dim-tick" x1="82.16" y1="79.96" x2="88.16" y2="73.96" />
+      <line class="dim-tick" x1="522.92" y1="79.96" x2="528.92" y2="73.96" />
+      <text class="dim-text" x="305.54" y="72">23'-11"</text>
+
+      <!-- 5'-4" (x: 525.92 to 624.08) -->
+      <line class="dim-line" x1="525.92" y1="76.96" x2="624.08" y2="76.96" />
+      <line class="dim-ext" x1="624.08" y1="71" x2="624.08" y2="97.96" />
+      <line class="dim-tick" x1="621.08" y1="79.96" x2="627.08" y2="73.96" />
+      <text class="dim-text" x="575.00" y="72">5'-4"</text>
+
+      <!-- 12'-5" (x: 624.08 to 852.92) -->
+      <line class="dim-line" x1="624.08" y1="76.96" x2="852.92" y2="76.96" />
+      <line class="dim-ext" x1="852.92" y1="71" x2="852.92" y2="123.64" />
+      <line class="dim-tick" x1="849.92" y1="79.96" x2="855.92" y2="73.96" />
+      <text class="dim-text" x="738.50" y="72">12'-5"</text>
+
+      <!-- 3'-4 1/2" (x: 852.92 to 914.96) -->
+      <line class="dim-line" x1="852.92" y1="76.96" x2="914.96" y2="76.96" />
+      <line class="dim-ext" x1="914.96" y1="71" x2="914.96" y2="123.64" />
+      <line class="dim-tick" x1="911.96" y1="79.96" x2="917.96" y2="73.96" />
+      <text class="dim-text" x="883.94" y="72">3'-4 1/2"</text>
+    </g>
+
+    <!-- Bottom Horizontal Dimensions (y=733.36, y=757.00) -->
+    <g id="dims-bottom">
+      <!-- 1'-0" (x: 85.16 to 103.64) -->
+      <line class="dim-line" x1="85.16" y1="733.36" x2="103.64" y2="733.36" />
+      <line class="dim-ext" x1="85.16" y1="711.76" x2="85.16" y2="740" />
+      <line class="dim-ext" x1="103.64" y1="711.76" x2="103.64" y2="740" />
+      <line class="dim-tick" x1="82.16" y1="736.36" x2="88.16" y2="730.36" />
+      <line class="dim-tick" x1="100.64" y1="736.36" x2="106.64" y2="730.36" />
+      <text class="dim-text" x="94.40" y="746">1'-0"</text>
+
+      <!-- 8'-2" (x: 103.64 to 254.12) -->
+      <line class="dim-line" x1="103.64" y1="733.36" x2="254.12" y2="733.36" />
+      <line class="dim-ext" x1="254.12" y1="711.76" x2="254.12" y2="740" />
+      <line class="dim-tick" x1="251.12" y1="736.36" x2="257.12" y2="730.36" />
+      <text class="dim-text" x="178.88" y="746">8'-2"</text>
+
+      <!-- 35'-0" (x: 254.12 to 899.00) -->
+      <line class="dim-line" x1="254.12" y1="733.36" x2="899.00" y2="733.36" />
+      <line class="dim-ext" x1="899.00" y1="711.76" x2="899.00" y2="740" />
+      <line class="dim-tick" x1="896.00" y1="736.36" x2="902.00" y2="730.36" />
+      <text class="dim-text" x="576.56" y="746">35'-0"</text>
+
+      <!-- 1'-6" (x: 899.00 to 926.60) -->
+      <line class="dim-line" x1="899.00" y1="733.36" x2="926.60" y2="733.36" />
+      <line class="dim-ext" x1="926.60" y1="711.76" x2="926.60" y2="740" />
+      <line class="dim-tick" x1="923.60" y1="736.36" x2="929.60" y2="730.36" />
+      <text class="dim-text" x="912.80" y="746">1'-6"</text>
+
+      <!-- 1'-3" (x: 926.60 to 949.64) at y=757.00 -->
+      <line class="dim-line" x1="926.60" y1="757.00" x2="949.64" y2="757.00" />
+      <line class="dim-ext" x1="926.60" y1="735" x2="926.60" y2="762" />
+      <line class="dim-ext" x1="949.64" y1="711.76" x2="949.64" y2="762" />
+      <line class="dim-tick" x1="923.60" y1="760.00" x2="929.60" y2="754.00" />
+      <line class="dim-tick" x1="946.64" y1="760.00" x2="952.64" y2="754.00" />
+      <text class="dim-text" x="938.12" y="770">1'-3"</text>
+    </g>
+
+    <!-- Left Vertical Dimensions (x=66.44) -->
+    <g id="dims-left">
+      <!-- 2'-4 1/2" (y: 97.96 to 142.12) -->
+      <line class="dim-line" x1="66.44" y1="97.96" x2="66.44" y2="142.12" />
+      <line class="dim-ext" x1="60" y1="97.96" x2="85.16" y2="97.96" />
+      <line class="dim-ext" x1="60" y1="142.12" x2="85.16" y2="142.12" />
+      <line class="dim-tick" x1="63.44" y1="100.96" x2="69.44" y2="94.96" />
+      <line class="dim-tick" x1="63.44" y1="145.12" x2="69.44" y2="139.12" />
+      <text class="dim-text-vert" x="52" y="120">2'-4 1/2"</text>
+
+      <!-- 29'-3" (y: 142.12 to 681.16) -->
+      <line class="dim-line" x1="66.44" y1="142.12" x2="66.44" y2="681.16" />
+      <line class="dim-ext" x1="60" y1="681.16" x2="85.16" y2="681.16" />
+      <line class="dim-tick" x1="63.44" y1="684.16" x2="69.44" y2="678.16" />
+      <text class="dim-text-vert" x="52" y="411">29'-3"</text>
+
+      <!-- 1'-8" (y: 681.16 to 711.76) -->
+      <line class="dim-line" x1="66.44" y1="681.16" x2="66.44" y2="711.76" />
+      <line class="dim-ext" x1="60" y1="711.76" x2="85.16" y2="711.76" />
+      <line class="dim-tick" x1="63.44" y1="714.76" x2="69.44" y2="708.76" />
+      <text class="dim-text-vert" x="52" y="696">1'-8"</text>
+    </g>
+
+    <!-- Right Vertical Dimensions (x=967.16) -->
+    <g id="dims-right">
+      <!-- 7" (y: 123.64 to 134.44) -->
+      <line class="dim-line" x1="967.16" y1="123.64" x2="967.16" y2="134.44" />
+      <line class="dim-ext" x1="914.96" y1="123.64" x2="973" y2="123.64" />
+      <line class="dim-ext" x1="904.64" y1="134.44" x2="973" y2="134.44" />
+      <line class="dim-tick" x1="964.16" y1="126.64" x2="970.16" y2="120.64" />
+      <line class="dim-tick" x1="964.16" y1="137.44" x2="970.16" y2="131.44" />
+      <text class="dim-text-vert" x="980" y="129">7"</text>
+
+      <!-- 5'-3" (y: 134.44 to 231.52) -->
+      <line class="dim-line" x1="967.16" y1="134.44" x2="967.16" y2="231.52" />
+      <line class="dim-ext" x1="908.84" y1="231.52" x2="973" y2="231.52" />
+      <line class="dim-tick" x1="964.16" y1="234.52" x2="970.16" y2="228.52" />
+      <text class="dim-text-vert" x="980" y="183">5'-3"</text>
+
+      <!-- 8'-0" (y: 231.52 to 378.52) -->
+      <line class="dim-line" x1="967.16" y1="231.52" x2="967.16" y2="378.52" />
+      <line class="dim-ext" x1="914.96" y1="378.52" x2="973" y2="378.52" />
+      <line class="dim-tick" x1="964.16" y1="381.52" x2="970.16" y2="375.52" />
+      <text class="dim-text-vert" x="980" y="305">8'-0"</text>
+
+      <!-- 6'-0" (y: 378.52 to 489.16) -->
+      <line class="dim-line" x1="967.16" y1="378.52" x2="967.16" y2="489.16" />
+      <line class="dim-ext" x1="949.64" y1="489.16" x2="973" y2="489.16" />
+      <line class="dim-tick" x1="964.16" y1="492.16" x2="970.16" y2="486.16" />
+      <text class="dim-text-vert" x="980" y="434">6'-0"</text>
+
+      <!-- 12'-1" (y: 489.16 to 711.76) -->
+      <line class="dim-line" x1="967.16" y1="489.16" x2="967.16" y2="711.76" />
+      <line class="dim-ext" x1="949.64" y1="711.76" x2="973" y2="711.76" />
+      <line class="dim-tick" x1="964.16" y1="714.76" x2="970.16" y2="708.76" />
+      <text class="dim-text-vert" x="980" y="600">12'-1"</text>
+    </g>
+  </g>
+</svg>

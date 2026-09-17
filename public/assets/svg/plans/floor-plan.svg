@@ -1,0 +1,78 @@
+<svg viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc" xmlns="http://www.w3.org/2000/svg">
+  <title id="title">Architectural Floor Plan</title>
+  <desc id="desc">Clean 2D architectural floor plan revealing structural grid, walls, and circulation.</desc>
+
+  <defs>
+    <style>
+      .ref-line { fill: none; stroke: currentColor; stroke-width: var(--stroke-ref, 0.5px); stroke-dasharray: 6 6; opacity: 0.5; }
+      .primary-line { fill: none; stroke: currentColor; stroke-width: var(--stroke-primary, 2.0px); stroke-linecap: square; stroke-linejoin: miter; }
+      .secondary-line { fill: none; stroke: currentColor; stroke-width: var(--stroke-secondary, 1.0px); stroke-linecap: square; stroke-linejoin: miter; }
+      .detail-line { fill: none; stroke: currentColor; stroke-width: var(--stroke-detail, 0.5px); stroke-linecap: square; stroke-linejoin: miter; }
+      .circulation-line { fill: none; stroke: currentColor; stroke-width: var(--stroke-circulation, 1.5px); stroke-dasharray: 4 8; opacity: 0.6; }
+    </style>
+  </defs>
+
+  <g id="site" class="ref-line">
+    <path id="site-boundary" d="M 100,100 L 1500,100 L 1500,900 L 100,900 Z" />
+  </g>
+
+  <g id="grid" class="ref-line">
+    <path id="grid-v-1" d="M 300,150 L 300,850" />
+    <path id="grid-v-2" d="M 700,150 L 700,850" />
+    <path id="grid-v-3" d="M 1100,150 L 1100,850" />
+    <path id="grid-v-4" d="M 1300,150 L 1300,850" />
+    <path id="grid-h-1" d="M 250,200 L 1350,200" />
+    <path id="grid-h-2" d="M 250,500 L 1350,500" />
+    <path id="grid-h-3" d="M 250,800 L 1350,800" />
+  </g>
+
+  <g id="walls-exterior" class="primary-line">
+    <!-- Walls drawn as thick outlines -->
+    <path id="wall-ext-top" d="M 300,200 L 1300,200" />
+    <path id="wall-ext-bottom" d="M 300,800 L 600,800 M 800,800 L 1300,800" />
+    <path id="wall-ext-left" d="M 300,200 L 300,800" />
+    <path id="wall-ext-right" d="M 1300,200 L 1300,800" />
+  </g>
+
+  <g id="walls-interior" class="secondary-line">
+    <path id="wall-int-1" d="M 700,200 L 700,400" />
+    <path id="wall-int-2" d="M 700,500 L 700,800" />
+    <path id="wall-int-3" d="M 1100,500 L 1100,800" />
+    <path id="wall-int-4" d="M 300,500 L 500,500" />
+    <path id="wall-int-5" d="M 600,500 L 700,500" />
+    <path id="wall-int-6" d="M 700,500 L 950,500" />
+  </g>
+
+  <g id="openings" class="secondary-line">
+    <!-- Doors (arcs) -->
+    <path id="door-entry" d="M 800,800 L 800,700 A 100 100 0 0 0 700,800" class="detail-line" />
+    <path id="door-int-1" d="M 700,400 L 600,400 A 100 100 0 0 0 700,500" class="detail-line" />
+    <path id="door-int-2" d="M 500,500 L 500,600 A 100 100 0 0 0 600,500" class="detail-line" />
+    <path id="door-int-3" d="M 1100,500 L 1000,500 A 100 100 0 0 1 1100,400" class="detail-line" />
+    <!-- Windows (represented as thin double lines) -->
+    <path id="window-1" d="M 400,195 L 600,195 M 400,205 L 600,205" class="detail-line" />
+    <path id="window-2" d="M 800,195 L 1200,195 M 800,205 L 1200,205" class="detail-line" />
+    <path id="window-3" d="M 295,300 L 295,700 M 305,300 L 305,700" class="detail-line" />
+  </g>
+
+  <g id="circulation" class="circulation-line">
+    <!-- Arrow showing main flow -->
+    <path id="circ-flow" d="M 750,850 L 750,650 C 750,550 550,550 550,450" />
+    <path id="circ-arrow" d="M 540,460 L 550,450 L 560,460" class="primary-line" style="stroke-dasharray: none;" />
+  </g>
+
+  <g id="furniture" class="detail-line">
+    <!-- Abstract representation of kitchen island, dining, sofa -->
+    <path id="kitchen-island" d="M 800,600 L 1000,600 L 1000,650 L 800,650 Z" />
+    <path id="dining-table" d="M 850,300 L 950,300 L 950,400 L 850,400 Z" />
+    <circle id="dining-chair-1" cx="830" cy="350" r="15" />
+    <circle id="dining-chair-2" cx="970" cy="350" r="15" />
+    <path id="sofa" d="M 1150,250 L 1150,450 L 1250,450 L 1250,400 L 1200,400 L 1200,250 Z" />
+  </g>
+
+  <g id="annotations" class="detail-line">
+    <!-- Dimensions -->
+    <path id="dim-line-ext-bottom" d="M 300,850 L 1300,850 M 300,840 L 300,860 M 1300,840 L 1300,860" />
+    <text id="dim-text-1" x="800" y="880" font-family="sans-serif" font-size="14" text-anchor="middle" fill="currentColor">OVERALL WIDTH 24.0m</text>
+  </g>
+</svg>

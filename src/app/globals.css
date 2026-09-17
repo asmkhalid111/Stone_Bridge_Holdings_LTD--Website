@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-canvas: #FBFBF9;
+  --bg-canvas-subtle: #F5F4F0;
+  --bg-canvas-dark: #121316;
+  --color-ink-primary: #121316;
+  --color-ink-secondary: #4B4D52;
+  --color-ink-muted: #7D8087;
+  --color-ink-subtle: #B8B9BD;
+  --color-border: #E5E3DE;
+  --color-border-subtle: #EFECE6;
+  --color-accent-tech: #A8502D;
+
+  /* Architectural stroke tokens — matching Phase 2 SVG system */
+  --stroke-primary: 1.6px;
+  --stroke-secondary: 1.0px;
+  --stroke-detail: 0.6px;
+  --stroke-ref: 0.4px;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    background-color: var(--bg-canvas);
+    color: var(--color-ink-primary);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--bg-canvas);
+    color: var(--color-ink-primary);
+    font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  }
+
+  ::selection {
+    background-color: var(--color-ink-primary);
+    color: var(--bg-canvas);
+  }
+}
+
+/* Drafting Grid Background pattern */
+.bg-drafting-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(18, 19, 22, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(18, 19, 22, 0.035) 1px, transparent 1px);
+}
+
+.bg-drafting-grid-dense {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(18, 19, 22, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(18, 19, 22, 0.04) 1px, transparent 1px);
+}
+
+/* SVG Line System Consistency Classes */
+.ref-line {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: var(--stroke-ref, 0.4px);
+  stroke-dasharray: 4 4;
+  opacity: 0.45;
+}
+
+.primary-line {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: var(--stroke-primary, 1.6px);
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+}
+
+.secondary-line {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: var(--stroke-secondary, 1.0px);
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+}
+
+.detail-line {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: var(--stroke-detail, 0.6px);
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+}
+
+/* Architectural crosshair decoration */
+.tech-crosshair {
+  position: relative;
+}
+.tech-crosshair::before,
+.tech-crosshair::after {
+  content: "";
+  position: absolute;
+  background-color: currentColor;
+  opacity: 0.35;
+}
+.tech-crosshair::before {
+  top: 50%;
+  left: -8px;
+  right: -8px;
+  height: 1px;
+}
+.tech-crosshair::after {
+  left: 50%;
+  top: -8px;
+  bottom: -8px;
+  width: 1px;
+}
+
+/* Mobile SVG simplification */
+@media (max-width: 767px) {
+  .svg-mobile-simplified .ref-line {
+    opacity: 0.2;
+    stroke-width: 0.3px;
+  }
+  .svg-mobile-simplified .detail-line {
+    opacity: 0.6;
+  }
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  svg path,
+  svg line,
+  svg rect,
+  svg polygon {
+    stroke-dasharray: none !important;
+    stroke-dashoffset: 0 !important;
+    opacity: 1 !important;
+    transition: none !important;
+  }
+}

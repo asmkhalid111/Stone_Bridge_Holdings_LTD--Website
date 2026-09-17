@@ -1,0 +1,290 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" width="100%" height="100%" role="img" aria-labelledby="p1-det-title p1-det-desc">
+  <title id="p1-det-title">Project 01 — Structural Connection Details (SC103 Assembly &amp; Plates)</title>
+  <desc id="p1-det-desc">Engineering fabrication details of column SC103, including tapered web cutting profile, base plate BP01, eave cap plate CP615x200x20, and purlin cleat PC210x6 for the single-storied steel building.</desc>
+
+  <style>
+    .ref-line { stroke: #94a3b8; stroke-width: 0.6; stroke-dasharray: 4 3; vector-effect: non-scaling-stroke; }
+    .center-line { stroke: #dc2626; stroke-width: 0.5; stroke-dasharray: 6 3 2 3; vector-effect: non-scaling-stroke; }
+    
+    .steel-outline { fill: #f8fafc; stroke: #0f172a; stroke-width: 1.5; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+    .plate-outline { fill: #f1f5f9; stroke: #0f172a; stroke-width: 1.5; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+    .weld-symbol { stroke: #0284c7; stroke-width: 1.0; vector-effect: non-scaling-stroke; }
+    .bolt-hole { fill: #dc2626; stroke: #991b1b; stroke-width: 0.8; }
+    .bolt-hole-sec { fill: #334155; stroke: #0f172a; stroke-width: 0.8; }
+    
+    .dim-line { stroke: #64748b; stroke-width: 0.7; vector-effect: non-scaling-stroke; }
+    .dim-tick { stroke: #1e293b; stroke-width: 1.0; vector-effect: non-scaling-stroke; }
+    .dim-text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 10px; fill: #334155; text-anchor: middle; }
+    .dim-text-vert { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9.5px; fill: #475569; text-anchor: middle; }
+    
+    .detail-heading { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 12px; font-weight: 700; fill: #0f172a; letter-spacing: 0.05em; }
+    .detail-sub { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 10px; fill: #dc2626; font-weight: 600; }
+    .detail-note { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9px; fill: #64748b; }
+    .label-spec { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9.5px; fill: #0f172a; font-weight: 600; }
+  </style>
+
+  <!-- 1. COLUMN ASSEMBLY: DETAIL OF SC103 (08 PCS) -->
+  <g id="column-assembly" class="scene-group" transform="translate(40, 30)">
+    <text class="detail-heading" x="120" y="25">DETAIL OF SC103</text>
+    <text class="detail-sub" x="120" y="40">(08 PCS)</text>
+    <text class="detail-note" x="120" y="55">WEB: 238~484*6; FLANGE: 200*8</text>
+
+    <!-- Base Plate BP01 at Column Foot -->
+    <g id="sc103-baseplate">
+      <rect id="bp01-elevation" class="steel-outline" x="90" y="630" width="76" height="12" style="fill:#e2e8f0;" />
+      <text class="label-spec" x="175" y="640">BP01</text>
+      <line class="center-line" x1="105" y1="620" x2="105" y2="655" />
+      <line class="center-line" x1="151" y1="620" x2="151" y2="655" />
+    </g>
+
+    <!-- Tapered Column Shaft -->
+    <g id="sc103-shaft">
+      <polygon id="sc103-elevation-body" class="steel-outline" 
+               points="105,630 105,150 177,150 141,630" />
+      <line id="sc103-flange-outer" class="steel-outline" x1="105" y1="630" x2="105" y2="150" style="stroke-width:2.0;" />
+      <line id="sc103-flange-inner" class="steel-outline" x1="141" y1="630" x2="177" y2="150" style="stroke-width:2.0;" />
+
+      <!-- Internal Stiffeners ST01 & ST02 near top -->
+      <g id="sc103-stiffeners">
+        <line id="stiffener-st01-line" class="ref-line" x1="105" y1="175" x2="173" y2="175" style="stroke-width:1.2; stroke:#0284c7;" />
+        <text class="label-spec" x="182" y="178" style="fill:#0284c7;">ST01</text>
+        <line id="stiffener-st02-line" class="ref-line" x1="105" y1="265" x2="162" y2="265" style="stroke-width:1.2; stroke:#0284c7;" />
+      </g>
+    </g>
+
+    <!-- Cap Plate CP615x200x20 at Head of Column -->
+    <g id="sc103-capplate">
+      <rect id="cp615-elevation" class="steel-outline" x="95" y="138" width="92" height="12" style="fill:#e2e8f0;" />
+      <text class="label-spec" x="195" y="148">CP615x200x20</text>
+    </g>
+
+    <!-- Dimension Stack for SC103 -->
+    <g id="sc103-dimensions">
+      <line class="dim-line" x1="70" y1="138" x2="70" y2="642" />
+      <path class="dim-tick" d="M 65 138 L 75 138 M 65 150 L 75 150 M 65 175 L 75 175 M 65 265 L 75 265 M 65 630 L 75 630 M 65 642 L 75 642" />
+      
+      <line class="dim-line" x1="70" y1="138" x2="95" y2="138" />
+      <line class="dim-line" x1="70" y1="150" x2="105" y2="150" />
+      <line class="dim-line" x1="70" y1="630" x2="90" y2="630" />
+      <line class="dim-line" x1="70" y1="642" x2="90" y2="642" />
+
+      <text class="dim-text-vert" x="55" y="146">20</text>
+      <text class="dim-text-vert" x="55" y="165">145</text>
+      <text class="dim-text-vert" x="55" y="225">581</text>
+      <text class="dim-text-vert" x="55" y="450">2272</text>
+      <text class="dim-text-vert" x="55" y="638">20</text>
+
+      <line class="dim-line" x1="30" y1="138" x2="30" y2="642" />
+      <path class="dim-tick" d="M 25 138 L 35 138 M 25 642 L 35 642" />
+      <text class="dim-text-vert" x="20" y="390" transform="rotate(-90 20 390)" style="font-weight:600;">3038 TOTAL</text>
+      <text class="dim-text-vert" x="42" y="390" transform="rotate(-90 42 390)">2998 WEB</text>
+
+      <line class="dim-line" x1="105" y1="120" x2="177" y2="120" />
+      <path class="dim-tick" d="M 105 115 L 105 125 M 177 115 L 177 125" />
+      <text class="dim-text" x="141" y="112">484</text>
+
+      <line class="dim-line" x1="105" y1="665" x2="141" y2="665" />
+      <path class="dim-tick" d="M 105 660 L 105 670 M 141 660 L 141 670" />
+      <text class="dim-text" x="123" y="678">234</text>
+    </g>
+  </g>
+
+  <!-- 2. CUTTING WEB OF SC103 (FABRICATION PROFILE) -->
+  <g id="cutting-web" class="scene-group" transform="translate(300, 30)">
+    <text class="detail-heading" x="70" y="25">CUTTING WEB OF SC103</text>
+    <text class="detail-note" x="70" y="40">TAPERED WEB PROFILE CUT FROM PL-6</text>
+
+    <!-- Cutting Pattern -->
+    <g id="cutting-pattern">
+      <rect class="ref-line" x="30" y="150" width="108" height="480" />
+      <text class="dim-text" x="84" y="105" style="font-weight:600;">718 RAW WIDTH</text>
+
+      <polygon id="cut-piece-1" class="steel-outline" 
+               points="30,150 102,150 66,630 30,630" style="fill:#e0f2fe; stroke:#0369a1;" />
+      
+      <polygon id="cut-piece-2" class="steel-outline" 
+               points="102,150 138,150 138,630 66,630" style="fill:#f8fafc; stroke:#64748b; stroke-dasharray:3 2;" />
+
+      <line id="cut-shear-line" x1="102" y1="150" x2="66" y2="630" style="stroke:#dc2626; stroke-width:1.4; stroke-dasharray:5 3;" />
+    </g>
+
+    <!-- Dimensions for Cutting Web -->
+    <g id="cutting-dimensions">
+      <line class="dim-line" x1="30" y1="135" x2="102" y2="135" />
+      <path class="dim-tick" d="M 30 130 L 30 140 M 102 130 L 102 140" />
+      <text class="dim-text" x="66" y="130">484</text>
+
+      <line class="dim-line" x1="102" y1="135" x2="138" y2="135" />
+      <path class="dim-tick" d="M 138 130 L 138 140" />
+      <text class="dim-text" x="120" y="130">234</text>
+
+      <line class="dim-line" x1="30" y1="115" x2="138" y2="115" />
+      <path class="dim-tick" d="M 30 110 L 30 120 M 138 110 L 138 120" />
+
+      <line class="dim-line" x1="30" y1="645" x2="66" y2="645" />
+      <path class="dim-tick" d="M 30 640 L 30 650 M 66 640 L 66 650" />
+      <text class="dim-text" x="48" y="658">234</text>
+
+      <line class="dim-line" x1="66" y1="645" x2="138" y2="645" />
+      <path class="dim-tick" d="M 138 640 L 138 650" />
+      <text class="dim-text" x="102" y="658">484</text>
+
+      <line class="dim-line" x1="155" y1="150" x2="155" y2="630" />
+      <path class="dim-tick" d="M 150 150 L 160 150 M 150 630 L 160 630" />
+      <text class="dim-text-vert" x="170" y="390" transform="rotate(-90 170 390)">2998 CUT LENGTH</text>
+      <text class="dim-text-vert" x="80" y="390" transform="rotate(-90 80 390)" style="fill:#dc2626; font-size:8.5px;">3008 DIAGONAL</text>
+    </g>
+  </g>
+
+  <!-- 3. DETAILS OF BP01 (BASE PLATE DETAIL) -->
+  <g id="base-plate-bp01" class="scene-group" transform="translate(680, 25)">
+    <text class="detail-heading" x="20" y="20">DETAILS OF BP01</text>
+    <text class="detail-sub" x="20" y="36">(THICK: 20mm); Total: 16 Nos.</text>
+
+    <!-- Generous clearance from header to drawing (y=105) -->
+    <g id="bp01-drawing" transform="translate(20, 105)">
+      <rect id="bp01-rect" class="plate-outline" x="0" y="0" width="180" height="150" rx="2" />
+      
+      <line class="center-line" x1="-15" y1="75" x2="195" y2="75" />
+      <line class="center-line" x1="90" y1="-15" x2="90" y2="165" />
+
+      <!-- Anchor Bolt Holes -->
+      <g id="bp01-hole-1" transform="translate(54, 39)">
+        <circle class="bolt-hole" cx="0" cy="0" r="7" />
+        <line class="center-line" x1="-10" y1="0" x2="10" y2="0" />
+        <line class="center-line" x1="0" y1="-10" x2="0" y2="10" />
+      </g>
+      <g id="bp01-hole-2" transform="translate(126, 39)">
+        <circle class="bolt-hole" cx="0" cy="0" r="7" />
+        <line class="center-line" x1="-10" y1="0" x2="10" y2="0" />
+        <line class="center-line" x1="0" y1="-10" x2="0" y2="10" />
+      </g>
+      <g id="bp01-hole-3" transform="translate(54, 111)">
+        <circle class="bolt-hole" cx="0" cy="0" r="7" />
+        <line class="center-line" x1="-10" y1="0" x2="10" y2="0" />
+        <line class="center-line" x1="0" y1="-10" x2="0" y2="10" />
+      </g>
+      <g id="bp01-hole-4" transform="translate(126, 111)">
+        <circle class="bolt-hole" cx="0" cy="0" r="7" />
+        <line class="center-line" x1="-10" y1="0" x2="10" y2="0" />
+        <line class="center-line" x1="0" y1="-10" x2="0" y2="10" />
+      </g>
+
+      <g id="bp01-weld-footprint" style="stroke:#0284c7; stroke-width:0.8; stroke-dasharray:2 2; fill:none;">
+        <rect x="75" y="25" width="30" height="100" />
+        <line x1="90" y1="35" x2="90" y2="115" style="stroke-width:1.2;" />
+      </g>
+
+      <!-- Clear Top Dimensions -->
+      <line class="dim-line" x1="0" y1="-32" x2="180" y2="-32" />
+      <path class="dim-tick" d="M 0 -37 L 0 -27 M 180 -37 L 180 -27" />
+      <text class="dim-text" x="90" y="-37" style="font-weight:600;">300</text>
+
+      <line class="dim-line" x1="0" y1="-14" x2="54" y2="-14" />
+      <line class="dim-line" x1="54" y1="-14" x2="126" y2="-14" />
+      <line class="dim-line" x1="126" y1="-14" x2="180" y2="-14" />
+      <path class="dim-tick" d="M 0 -19 L 0 -9 M 54 -19 L 54 -9 M 126 -19 L 126 -9 M 180 -19 L 180 -9" />
+      <text class="dim-text" x="27" y="-18">90</text>
+      <text class="dim-text" x="90" y="-18">120</text>
+      <text class="dim-text" x="153" y="-18">90</text>
+
+      <!-- Height Dimensions -->
+      <line class="dim-line" x1="195" y1="0" x2="195" y2="150" />
+      <path class="dim-tick" d="M 190 0 L 200 0 M 190 150 L 200 150" />
+      <text class="dim-text-vert" x="208" y="75" transform="rotate(90 208 75)" style="font-weight:600;">250</text>
+
+      <line class="dim-line" x1="220" y1="0" x2="220" y2="39" />
+      <line class="dim-line" x1="220" y1="39" x2="220" y2="111" />
+      <line class="dim-line" x1="220" y1="111" x2="220" y2="150" />
+      <path class="dim-tick" d="M 215 0 L 225 0 M 215 39 L 225 39 M 215 111 L 225 111 M 215 150 L 225 150" />
+      <text class="dim-text-vert" x="235" y="20">65</text>
+      <text class="dim-text-vert" x="235" y="75">120</text>
+      <text class="dim-text-vert" x="235" y="130">65</text>
+      
+      <text class="label-spec" x="135" y="55" style="fill:#dc2626;">4-Ø24 HOLES</text>
+    </g>
+  </g>
+
+  <!-- 4. DETAILS OF CP615x200x20 (EAVE CAP PLATE) -->
+  <g id="cap-plate-cp615" class="scene-group" transform="translate(680, 325)">
+    <text class="detail-heading" x="20" y="20">DETAILS OF CP615x200x20</text>
+    <text class="detail-sub" x="20" y="36">(20 mm Thickness), Qty: 16 Nos</text>
+
+    <g id="cp615-drawing" transform="translate(20, 85)">
+      <rect id="cp615-rect" class="plate-outline" x="0" y="0" width="330" height="108" rx="2" />
+      <line class="center-line" x1="-10" y1="54" x2="340" y2="54" />
+
+      <!-- 8 Bolt Holes Ø24 -->
+      <circle class="bolt-hole-sec" cx="27" cy="27" r="6" /><circle class="bolt-hole-sec" cx="27" cy="81" r="6" />
+      <circle class="bolt-hole-sec" cx="81" cy="27" r="6" /><circle class="bolt-hole-sec" cx="81" cy="81" r="6" />
+      <circle class="bolt-hole-sec" cx="135" cy="27" r="6" /><circle class="bolt-hole-sec" cx="135" cy="81" r="6" />
+      
+      <line class="ref-line" x1="165" y1="0" x2="165" y2="108" style="stroke:#0284c7; stroke-width:1.2;" />
+      <text class="label-spec" x="167" y="18" style="fill:#0284c7; font-size:8px;">ST02</text>
+      
+      <circle class="bolt-hole-sec" cx="195" cy="27" r="6" /><circle class="bolt-hole-sec" cx="195" cy="81" r="6" />
+      <circle class="bolt-hole-sec" cx="249" cy="27" r="6" /><circle class="bolt-hole-sec" cx="249" cy="81" r="6" />
+      <circle class="bolt-hole-sec" cx="303" cy="27" r="6" /><circle class="bolt-hole-sec" cx="303" cy="81" r="6" />
+
+      <!-- Dimensions for CP615 -->
+      <line class="dim-line" x1="0" y1="-20" x2="330" y2="-20" />
+      <path class="dim-tick" d="M 0 -25 L 0 -15 M 330 -25 L 330 -15" />
+      <text class="dim-text" x="165" y="-25" style="font-weight:600;">615</text>
+
+      <line class="dim-line" x1="345" y1="0" x2="345" y2="108" />
+      <path class="dim-tick" d="M 340 0 L 350 0 M 340 108 L 350 108" />
+      <text class="dim-text-vert" x="360" y="58" transform="rotate(90 360 58)">200</text>
+      
+      <text class="label-spec" x="220" y="70" style="fill:#0f172a;">Ø24 BOLTS (8 NOS)</text>
+    </g>
+  </g>
+
+  <!-- 5. DETAILS OF PC210*6 (PURLIN CLEAT) -->
+  <g id="purlin-cleat-pc210" class="scene-group" transform="translate(680, 565)">
+    <text class="detail-heading" x="20" y="20">DETAILS OF PC210*6</text>
+    <text class="detail-sub" x="20" y="36">(THICKNESS 6mm) Qty: 24 Nos</text>
+
+    <g id="pc210-drawing" transform="translate(40, 85)">
+      <rect id="pc210-rect" class="plate-outline" x="0" y="0" width="104" height="168" rx="2" style="fill:#e0f2fe;" />
+
+      <!-- 4 Purlin Fastener Holes Ø14 -->
+      <circle class="bolt-hole" cx="20" cy="28" r="4.5" /><circle class="bolt-hole" cx="84" cy="28" r="4.5" />
+      <circle class="bolt-hole" cx="20" cy="92" r="4.5" /><circle class="bolt-hole" cx="84" cy="92" r="4.5" />
+
+      <!-- Fillet Weld Symbol -->
+      <g id="pc210-weld" class="weld-symbol">
+        <line x1="0" y1="168" x2="104" y2="168" style="stroke-width:2.0;" />
+        <path d="M 10 168 L 15 160 M 30 168 L 35 160 M 50 168 L 55 160 M 70 168 L 75 160 M 90 168 L 95 160" />
+      </g>
+
+      <!-- Dimensions for PC210 -->
+      <line class="dim-line" x1="0" y1="-28" x2="104" y2="-28" />
+      <path class="dim-tick" d="M 0 -33 L 0 -23 M 104 -33 L 104 -23" />
+      <text class="dim-text" x="52" y="-33" style="font-weight:600;">130</text>
+
+      <line class="dim-line" x1="20" y1="-12" x2="84" y2="-12" />
+      <path class="dim-tick" d="M 20 -17 L 20 -7 M 84 -17 L 84 -7" />
+      <text class="dim-text" x="52" y="-16">80</text>
+
+      <line class="dim-line" x1="120" y1="0" x2="120" y2="168" />
+      <path class="dim-tick" d="M 115 0 L 125 0 M 115 168 L 125 168" />
+      <text class="dim-text-vert" x="135" y="88" transform="rotate(90 135 88)">210</text>
+
+      <line class="dim-line" x1="-15" y1="0" x2="-15" y2="28" />
+      <line class="dim-line" x1="-15" y1="28" x2="-15" y2="92" />
+      <line class="dim-line" x1="-15" y1="92" x2="-15" y2="168" />
+      <path class="dim-tick" d="M -20 0 L -10 0 M -20 28 L -10 28 M -20 92 L -10 92 M -20 168 L -10 168" />
+      <text class="dim-text-vert" x="-28" y="16">35</text>
+      <text class="dim-text-vert" x="-28" y="60">80</text>
+      <text class="dim-text-vert" x="-28" y="130">95</text>
+
+      <text class="label-spec" x="20" y="65" style="fill:#dc2626;">4-Ø14 HOLES</text>
+    </g>
+
+    <!-- Technical Sheet Ref -->
+    <g id="detail-sheet-title" transform="translate(180, 190)">
+      <text class="label-spec" x="0" y="0" style="font-size: 11px;">DRAWING: DETAIL OF SC03</text>
+      <text class="detail-note" x="0" y="15">DWG NO: ST-10 · REF: BS-26-031 · REV: 00</text>
+    </g>
+  </g>
+</svg>

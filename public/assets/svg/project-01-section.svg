@@ -1,0 +1,258 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 740" width="100%" height="100%" role="img" aria-labelledby="p1-sec-title p1-sec-desc">
+  <title id="p1-sec-title">Project 01 — Structural Cross Section (Grid 02–05)</title>
+  <desc id="p1-sec-desc">Architectural cross-section of the single-storied steel building at Uttara, Dhaka showing foundation pedestals, tapered steel columns SC103, roof rafters R201 to R203, purlins, and structural grid dimensions.</desc>
+
+  <style>
+    .ref-line { stroke: #94a3b8; stroke-width: 0.6; stroke-dasharray: 6 4; vector-effect: non-scaling-stroke; }
+    .grid-bubble { fill: #f8fafc; stroke: #475569; stroke-width: 1.0; }
+    .grid-text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 13px; font-weight: 700; fill: #1e293b; text-anchor: middle; }
+    
+    .ground-line { stroke: #0f172a; stroke-width: 2.0; vector-effect: non-scaling-stroke; }
+    .ground-hatch { stroke: #94a3b8; stroke-width: 0.7; vector-effect: non-scaling-stroke; }
+    
+    .pedestal-outline { fill: #f1f5f9; stroke: #1e293b; stroke-width: 1.4; vector-effect: non-scaling-stroke; }
+    .pedestal-rebar { stroke: #64748b; stroke-width: 0.8; stroke-dasharray: 3 3; }
+    
+    .steel-primary { fill: #f8fafc; stroke: #0f172a; stroke-width: 1.6; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+    .steel-flange { stroke: #0f172a; stroke-width: 1.8; vector-effect: non-scaling-stroke; }
+    .steel-web { stroke: #334155; stroke-width: 1.0; vector-effect: non-scaling-stroke; }
+    .plate-thick { fill: #1e293b; stroke: #0f172a; stroke-width: 1.2; vector-effect: non-scaling-stroke; }
+    .purlin-shape { fill: #f0f9ff; stroke: #0284c7; stroke-width: 1.0; vector-effect: non-scaling-stroke; }
+    .cleat-shape { fill: #bae6fd; stroke: #0369a1; stroke-width: 0.8; vector-effect: non-scaling-stroke; }
+    
+    .dim-line { stroke: #64748b; stroke-width: 0.7; vector-effect: non-scaling-stroke; }
+    .dim-tick { stroke: #1e293b; stroke-width: 1.1; vector-effect: non-scaling-stroke; }
+    .dim-text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 10.5px; fill: #334155; text-anchor: middle; }
+    .dim-unit { font-size: 9px; fill: #64748b; }
+    .tag-text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 10px; font-weight: 600; fill: #0f172a; }
+    .tag-sub { font-size: 8.5px; font-weight: normal; fill: #64748b; }
+  </style>
+
+  <!-- 1. REFERENCE GRID & DATUMS (0% - 15%) -->
+  <g id="reference" class="scene-group">
+    <!-- Grid Centerlines -->
+    <line id="grid-line-d" class="ref-line" x1="180" y1="65" x2="180" y2="620" />
+    <line id="grid-line-c" class="ref-line" x1="480" y1="65" x2="480" y2="620" />
+    <line id="grid-line-ridge" class="ref-line" x1="630" y1="65" x2="630" y2="620" style="stroke:#cbd5e1; stroke-dasharray: 4 4;" />
+    <line id="grid-line-b" class="ref-line" x1="780" y1="65" x2="780" y2="620" />
+    <line id="grid-line-a" class="ref-line" x1="1080" y1="65" x2="1080" y2="620" />
+
+    <!-- Grid Bubbles with Perfectly Centered Text -->
+    <g id="grid-bubble-d">
+      <circle class="grid-bubble" cx="180" cy="85" r="14" />
+      <text class="grid-text" x="180" y="90">D</text>
+    </g>
+    <g id="grid-bubble-c">
+      <circle class="grid-bubble" cx="480" cy="85" r="14" />
+      <text class="grid-text" x="480" y="90">C</text>
+    </g>
+    <g id="grid-bubble-b">
+      <circle class="grid-bubble" cx="780" cy="85" r="14" />
+      <text class="grid-text" x="780" y="90">B</text>
+    </g>
+    <g id="grid-bubble-a">
+      <circle class="grid-bubble" cx="1080" cy="85" r="14" />
+      <text class="grid-text" x="1080" y="90">A</text>
+    </g>
+
+    <!-- Elevation Datum Markers -->
+    <g id="datum-ridge" transform="translate(640, 263)">
+      <line class="dim-line" x1="-30" y1="0" x2="45" y2="0" style="stroke-dasharray: 3 3;" />
+      <text class="tag-text" x="50" y="3">+4.488m</text>
+    </g>
+    <g id="datum-eave" transform="translate(195, 335)">
+      <line class="dim-line" x1="-35" y1="0" x2="30" y2="0" style="stroke-dasharray: 3 3;" />
+      <text class="tag-text" x="35" y="3">+3.635m</text>
+    </g>
+  </g>
+
+  <!-- 2. GROUND & SOIL LEVEL (0% - 15%) -->
+  <g id="ground" class="scene-group">
+    <!-- Ground Baseline (GL) -->
+    <line id="ground-datum" class="ground-line" x1="90" y1="580" x2="1170" y2="580" />
+    <text class="tag-text" x="100" y="573">±0.000 GL</text>
+
+    <!-- Restrained Architectural Soil Hatching -->
+    <g id="ground-hatching" class="ground-hatch">
+      <path d="M 110 580 L 100 595 M 130 580 L 120 595 M 150 580 L 140 595 M 170 580 L 160 595 
+               M 210 580 L 200 595 M 230 580 L 220 595 M 250 580 L 240 595 M 270 580 L 260 595 
+               M 290 580 L 280 595 M 310 580 L 300 595 M 330 580 L 320 595 M 350 580 L 340 595 
+               M 370 580 L 360 595 M 390 580 L 380 595 M 410 580 L 400 595 M 430 580 L 420 595 
+               M 450 580 L 440 595 M 470 580 L 460 595 M 490 580 L 480 595 M 510 580 L 500 595 
+               M 530 580 L 520 595 M 550 580 L 540 595 M 570 580 L 560 595 M 590 580 L 580 595 
+               M 610 580 L 600 595 M 630 580 L 620 595 M 650 580 L 640 595 M 670 580 L 660 595 
+               M 690 580 L 680 595 M 710 580 L 700 595 M 730 580 L 720 595 M 750 580 L 740 595 
+               M 770 580 L 760 595 M 790 580 L 780 595 M 810 580 L 800 595 M 830 580 L 820 595 
+               M 850 580 L 840 595 M 870 580 L 860 595 M 890 580 L 880 595 M 910 580 L 900 595 
+               M 930 580 L 920 595 M 950 580 L 940 595 M 970 580 L 960 595 M 990 580 L 980 595 
+               M 1010 580 L 1000 595 M 1030 580 L 1020 595 M 1050 580 L 1040 595 M 1070 580 L 1060 595 
+               M 1110 580 L 1100 595 M 1130 580 L 1120 595 M 1150 580 L 1140 595" />
+    </g>
+  </g>
+
+  <!-- 3. FOUNDATION & PEDESTALS (15% - 35%) -->
+  <g id="foundation" class="scene-group">
+    <!-- Grid D RCC Pedestal & Footing -->
+    <g id="foundation-pedestal-d">
+      <rect id="pedestal-d-stem" class="pedestal-outline" x="166" y="520" width="28" height="60" />
+      <rect id="pedestal-d-footing" class="pedestal-outline" x="150" y="580" width="60" height="25" />
+      <rect id="grout-d" class="plate-thick" x="163" y="516" width="34" height="4" />
+      <line class="pedestal-rebar" x1="172" y1="525" x2="172" y2="595" />
+      <line class="pedestal-rebar" x1="188" y1="525" x2="188" y2="595" />
+    </g>
+
+    <!-- Grid A RCC Pedestal & Footing -->
+    <g id="foundation-pedestal-a">
+      <rect id="pedestal-a-stem" class="pedestal-outline" x="1066" y="520" width="28" height="60" />
+      <rect id="pedestal-a-footing" class="pedestal-outline" x="1050" y="580" width="60" height="25" />
+      <rect id="grout-a" class="plate-thick" x="1063" y="516" width="34" height="4" />
+      <line class="pedestal-rebar" x1="1072" y1="525" x2="1072" y2="595" />
+      <line class="pedestal-rebar" x1="1088" y1="525" x2="1088" y2="595" />
+    </g>
+  </g>
+
+  <!-- 4. STEEL COLUMNS SC103 (35% - 60%) -->
+  <g id="steel-columns" class="scene-group">
+    <!-- Grid D Column SC103 (Tapered Portal Column) -->
+    <g id="column-sc103-left">
+      <rect id="bp01-left" class="plate-thick" x="162" y="510" width="36" height="6" />
+      <polygon id="sc103-left-profile" class="steel-primary" 
+               points="166,510 166,340 198,340 182,510" />
+      <line id="sc103-left-flange-outer" class="steel-flange" x1="166" y1="510" x2="166" y2="340" />
+      <line id="sc103-left-flange-inner" class="steel-flange" x1="182" y1="510" x2="198" y2="340" />
+      <polygon id="sc103-left-haunch" class="plate-thick" points="164,340 200,340 196,334 164,334" />
+      <circle cx="169" cy="513" r="1.5" fill="#f8fafc" />
+      <circle cx="179" cy="513" r="1.5" fill="#f8fafc" />
+    </g>
+
+    <!-- Grid A Column SC103 (Symmetric Tapered Portal Column) -->
+    <g id="column-sc103-right">
+      <rect id="bp01-right" class="plate-thick" x="1062" y="510" width="36" height="6" />
+      <polygon id="sc103-right-profile" class="steel-primary" 
+               points="1094,510 1094,340 1062,340 1078,510" />
+      <line id="sc103-right-flange-outer" class="steel-flange" x1="1094" y1="510" x2="1094" y2="340" />
+      <line id="sc103-right-flange-inner" class="steel-flange" x1="1078" y1="510" x2="1062" y2="340" />
+      <polygon id="sc103-right-haunch" class="plate-thick" points="1096,340 1060,340 1064,334 1096,334" />
+      <circle cx="1081" cy="513" r="1.5" fill="#f8fafc" />
+      <circle cx="1091" cy="513" r="1.5" fill="#f8fafc" />
+    </g>
+
+    <!-- Interior Posts Indication (dashed) -->
+    <line id="post-c" class="steel-web" x1="480" y1="510" x2="480" y2="295" style="stroke-dasharray: 2 2;" />
+    <line id="post-b" class="steel-web" x1="780" y1="510" x2="780" y2="295" style="stroke-dasharray: 2 2;" />
+  </g>
+
+  <!-- 5. ROOF RAFTERS R201–R203 (60% - 85%) -->
+  <g id="roof-rafters" class="scene-group">
+    <!-- Left Rafter Assembly -->
+    <g id="rafter-left">
+      <line id="rafter-left-top-flange" class="steel-flange" x1="166" y1="334" x2="630" y2="278" />
+      <path id="rafter-left-bottom-flange" class="steel-flange" 
+            d="M 198 340 L 320 359 L 520 311 L 630 308" />
+      <polygon id="rafter-left-body" class="steel-primary" 
+               points="166,334 630,278 630,308 520,311 320,359 198,340" />
+      <line id="splice-r201-r202" class="plate-thick" x1="320" y1="315" x2="320" y2="359" />
+      <line id="splice-r202-r203" class="plate-thick" x1="520" y1="291" x2="520" y2="311" />
+    </g>
+
+    <!-- Right Rafter Assembly -->
+    <g id="rafter-right">
+      <line id="rafter-right-top-flange" class="steel-flange" x1="630" y1="278" x2="1094" y2="334" />
+      <path id="rafter-right-bottom-flange" class="steel-flange" 
+            d="M 630 308 L 740 311 L 940 359 L 1062 340" />
+      <polygon id="rafter-right-body" class="steel-primary" 
+               points="630,278 1094,334 1062,340 940,359 740,311 630,308" />
+      <line id="splice-r203-r202-right" class="plate-thick" x1="740" y1="291" x2="740" y2="311" />
+      <line id="splice-r202-r201-right" class="plate-thick" x1="940" y1="315" x2="940" y2="359" />
+    </g>
+
+    <!-- Ridge Apex Connection -->
+    <g id="apex-connection">
+      <line id="apex-splice-plate" class="plate-thick" x1="630" y1="275" x2="630" y2="311" style="stroke-width: 2.5;" />
+      <circle cx="628" cy="285" r="1.5" fill="#f8fafc" />
+      <circle cx="632" cy="285" r="1.5" fill="#f8fafc" />
+      <circle cx="628" cy="301" r="1.5" fill="#f8fafc" />
+      <circle cx="632" cy="301" r="1.5" fill="#f8fafc" />
+    </g>
+  </g>
+
+  <!-- 6. PURLINS & SECONDARY STRUCTURE (85% - 100%) -->
+  <g id="secondary-structure" class="scene-group">
+    <g id="purlin-l1" transform="translate(195, 325) rotate(-6.9)"><rect class="purlin-shape" x="-4" y="-12" width="8" height="12"/><line class="cleat-shape" x1="4" y1="-8" x2="4" y2="0"/></g>
+    <g id="purlin-l2" transform="translate(253, 318) rotate(-6.9)"><rect class="purlin-shape" x="-4" y="-12" width="8" height="12"/><line class="cleat-shape" x1="4" y1="-8" x2="4" y2="0"/></g>
+    <g id="purlin-l3" transform="translate(311, 311) rotate(-6.9)"><rect class="purlin-shape" x="-4" y="-12" width="8" height="12"/><line class="cleat-shape" x1="4" y1="-8" x2="4" y2="0"/></g>
+    <g id="purlin-l4" transform="translate(369, 304) rotate(-6.9)"><rect class="purlin-shape" x="-4" y="-12" width="8" height="12"/><line class="cleat-shape" x1="4" y1="-8" x2="4" y2="0"/></g>
+    <g id="purlin-l5" transform="translate(427, 297) rotate(-6.9)"><rect class="purlin-shape" x="-4" y="-12" width="8" height="12"/><line class="cleat-shape" x1="4" y1="-8" x2="4" y2="0"/></g>
+    <g id="purlin-l6" transform="translate(485, 290) rotate(-6.9)"><rect class="purlin-shape" x="-4" y="-12" width="8" height="12"/><line class="cleat-shape" x1="4" y1="-8" x2="4" y2="0"/></g>
+    <g id="purlin-l7" transform="translate(543, 283) rotate(-6.9)"><rect class="purlin-shape" x="-4" y="-12" width="8" height="12"/><line class="cleat-shape" x1="4" y1="-8" x2="4" y2="0"/></g>
+    <g id="purlin-l8" transform="translate(601, 276) rotate(-6.9)"><rect class="purlin-shape" x="-4" y="-12" width="8" height="12"/><line class="cleat-shape" x1="4" y1="-8" x2="4" y2="0"/></g>
+
+    <!-- Ridge Cap Purlins -->
+    <g id="purlin-apex" transform="translate(630, 273)"><rect class="purlin-shape" x="-8" y="-12" width="16" height="12"/></g>
+
+    <g id="purlin-r8" transform="translate(659, 276) rotate(6.9)"><rect class="purlin-shape" x="-4" y="-12" width="8" height="12"/><line class="cleat-shape" x1="-4" y1="-8" x2="-4" y2="0"/></g>
+    <g id="purlin-r7" transform="translate(717, 283) rotate(6.9)"><rect class="purlin-shape" x="-4" y="-12" width="8" height="12"/><line class="cleat-shape" x1="-4" y1="-8" x2="-4" y2="0"/></g>
+    <g id="purlin-r6" transform="translate(775, 290) rotate(6.9)"><rect class="purlin-shape" x="-4" y="-12" width="8" height="12"/><line class="cleat-shape" x1="-4" y1="-8" x2="-4" y2="0"/></g>
+    <g id="purlin-r5" transform="translate(833, 297) rotate(6.9)"><rect class="purlin-shape" x="-4" y="-12" width="8" height="12"/><line class="cleat-shape" x1="-4" y1="-8" x2="-4" y2="0"/></g>
+    <g id="purlin-r4" transform="translate(891, 304) rotate(6.9)"><rect class="purlin-shape" x="-4" y="-12" width="8" height="12"/><line class="cleat-shape" x1="-4" y1="-8" x2="-4" y2="0"/></g>
+    <g id="purlin-r3" transform="translate(949, 311) rotate(6.9)"><rect class="purlin-shape" x="-4" y="-12" width="8" height="12"/><line class="cleat-shape" x1="-4" y1="-8" x2="-4" y2="0"/></g>
+    <g id="purlin-r2" transform="translate(1007, 318) rotate(6.9)"><rect class="purlin-shape" x="-4" y="-12" width="8" height="12"/><line class="cleat-shape" x1="-4" y1="-8" x2="-4" y2="0"/></g>
+    <g id="purlin-r1" transform="translate(1065, 325) rotate(6.9)"><rect class="purlin-shape" x="-4" y="-12" width="8" height="12"/><line class="cleat-shape" x1="-4" y1="-8" x2="-4" y2="0"/></g>
+  </g>
+
+  <!-- 7. ARCHITECTURAL ANNOTATIONS & DIMENSIONS (85% - 100%) -->
+  <g id="annotations" class="scene-group">
+    <!-- Top Bay Dimensions (Between Grids D-C, C-Apex, Apex-B, B-A) -->
+    <line class="dim-line" x1="180" y1="135" x2="1080" y2="135" />
+    <path class="dim-tick" d="M 175 130 L 185 140 M 475 130 L 485 140 M 625 130 L 635 140 M 775 130 L 785 140 M 1075 130 L 1085 140" />
+    <line class="dim-line" x1="180" y1="105" x2="180" y2="140" />
+    <line class="dim-line" x1="480" y1="105" x2="480" y2="140" />
+    <line class="dim-line" x1="630" y1="105" x2="630" y2="140" />
+    <line class="dim-line" x1="780" y1="105" x2="780" y2="140" />
+    <line class="dim-line" x1="1080" y1="105" x2="1080" y2="140" />
+
+    <text class="dim-text" x="330" y="130">6457 <tspan class="dim-unit">[21'-2"]</tspan></text>
+    <text class="dim-text" x="555" y="130">3228 <tspan class="dim-unit">[10'-7"]</tspan></text>
+    <text class="dim-text" x="705" y="130">3229 <tspan class="dim-unit">[10'-7"]</tspan></text>
+    <text class="dim-text" x="930" y="130">6457 <tspan class="dim-unit">[21'-2"]</tspan></text>
+
+    <!-- Dimension Line 2: Overall Building Span -->
+    <line class="dim-line" x1="180" y1="165" x2="1080" y2="165" />
+    <path class="dim-tick" d="M 175 160 L 185 170 M 1075 160 L 1085 170" />
+    <line class="dim-line" x1="180" y1="135" x2="180" y2="170" />
+    <line class="dim-line" x1="1080" y1="135" x2="1080" y2="170" />
+    <text class="dim-text" x="630" y="160" style="font-weight: 700; fill: #0f172a;">19371 <tspan class="dim-unit">[63'-7"] TOTAL SPAN</tspan></text>
+
+    <!-- Height Dimensions Left (Clear & Eave Height) -->
+    <line class="dim-line" x1="120" y1="340" x2="120" y2="580" />
+    <path class="dim-tick" d="M 115 335 L 125 345 M 115 575 L 125 585" />
+    <line class="dim-line" x1="120" y1="340" x2="166" y2="340" />
+    <line class="dim-line" x1="90" y1="580" x2="120" y2="580" />
+    <text class="dim-text" x="108" y="460" transform="rotate(-90 108 460)">3635 <tspan class="dim-unit">[11'-11"] EAVE</tspan></text>
+
+    <!-- Member Specification Callouts -->
+    <g id="callout-rafter" transform="translate(630, 195)">
+      <text class="tag-text" x="0" y="0" text-anchor="middle">RAFTER: WEB 488~238~488*6; FLANGE 200*6</text>
+    </g>
+
+    <g id="callout-column-d" transform="translate(210, 440)">
+      <text class="tag-text" x="0" y="0">SC103</text>
+      <text class="tag-sub" x="0" y="13">WEB: 234~484*6</text>
+      <text class="tag-sub" x="0" y="25">FLANGE: 200*8</text>
+      <line class="dim-line" x1="-5" y1="8" x2="-25" y2="15" />
+    </g>
+
+    <g id="callout-column-a" transform="translate(1000, 440)">
+      <text class="tag-text" x="0" y="0">SC103</text>
+      <text class="tag-sub" x="0" y="13">WEB: 238~484*6</text>
+      <text class="tag-sub" x="0" y="25">FLANGE: 200*8</text>
+      <line class="dim-line" x1="50" y1="8" x2="70" y2="15" />
+    </g>
+
+    <!-- Drawing Title & Reference Label -->
+    <g id="drawing-title-block" transform="translate(180, 670)">
+      <text class="tag-text" x="0" y="0" style="font-size: 13px; letter-spacing: 0.05em;">SECTION : 02~05</text>
+      <text class="tag-sub" x="0" y="18" style="font-size: 10px;">PROPOSED SINGLE-STORIED PRE-FABRICATED STEEL BUILDING · UTTARA, DHAKA · DWG NO: ST-09</text>
+    </g>
+  </g>
+</svg>

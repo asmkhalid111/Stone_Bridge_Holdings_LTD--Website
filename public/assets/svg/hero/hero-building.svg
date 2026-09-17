@@ -1,0 +1,88 @@
+<svg viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc" xmlns="http://www.w3.org/2000/svg">
+  <title id="title">Contemporary building construction sequence</title>
+  <desc id="desc">Architectural line drawing showing the building from foundation to completed facade.</desc>
+
+  <!-- Defs for common styles -->
+  <defs>
+    <style>
+      .ref-line { fill: none; stroke: currentColor; stroke-width: var(--stroke-ref, 0.5px); stroke-dasharray: 4 4; opacity: 0.4; }
+      .primary-line { fill: none; stroke: currentColor; stroke-width: var(--stroke-primary, 1.6px); stroke-linecap: square; stroke-linejoin: miter; }
+      .secondary-line { fill: none; stroke: currentColor; stroke-width: var(--stroke-secondary, 1.0px); stroke-linecap: square; stroke-linejoin: miter; }
+      .detail-line { fill: none; stroke: currentColor; stroke-width: var(--stroke-detail, 0.6px); stroke-linecap: square; stroke-linejoin: miter; }
+    </style>
+  </defs>
+
+  <g id="site" class="ref-line">
+    <path id="site-ground" d="M 100,850 L 1500,850" />
+    <path id="site-grid-vertical" d="M 400,200 L 400,900 M 700,200 L 700,900 M 1000,200 L 1000,900 M 1200,200 L 1200,900" />
+    <path id="site-grid-horizontal" d="M 200,300 L 1400,300 M 200,550 L 1400,550 M 200,800 L 1400,800" />
+  </g>
+
+  <g id="foundation" class="primary-line">
+    <path id="foundation-main" d="M 400,850 L 1200,850 L 1200,800 L 400,800 Z" />
+    <path id="foundation-pier-1" d="M 450,850 L 450,900" />
+    <path id="foundation-pier-2" d="M 700,850 L 700,900" />
+    <path id="foundation-pier-3" d="M 950,850 L 950,900" />
+    <path id="foundation-pier-4" d="M 1150,850 L 1150,900" />
+  </g>
+
+  <g id="structure" class="primary-line">
+    <!-- Columns -->
+    <path id="column-1" d="M 450,800 L 450,300 M 470,800 L 470,300" />
+    <path id="column-2" d="M 700,800 L 700,550 M 720,800 L 720,550" />
+    <path id="column-3" d="M 950,800 L 950,300 M 970,800 L 970,300" />
+    <path id="column-4" d="M 1150,800 L 1150,550 M 1170,800 L 1170,550" />
+    <!-- Slabs -->
+    <path id="slab-level-1" d="M 350,550 L 1250,550 L 1250,530 L 350,530 Z" />
+    <path id="slab-roof" d="M 380,300 L 1000,300 L 1000,280 L 380,280 Z" />
+    <path id="slab-lower-roof" d="M 1000,530 L 1220,530 L 1220,510 L 1000,510 Z" />
+  </g>
+
+  <g id="architecture" class="secondary-line">
+    <path id="wall-exterior-left" d="M 400,800 L 400,300 L 450,300 L 450,800 Z" />
+    <path id="wall-exterior-right" d="M 1200,800 L 1200,530 L 1150,530 L 1150,800 Z" />
+    <path id="wall-interior-1" d="M 700,530 L 700,300 L 720,300 L 720,530 Z" />
+    <path id="cantilever-box" d="M 300,530 L 450,530 L 450,350 L 300,350 Z" />
+  </g>
+
+  <g id="openings" class="secondary-line">
+    <path id="window-large-1" d="M 470,800 L 700,800 L 700,550 L 470,550 Z" />
+    <path id="window-large-2" d="M 720,800 L 950,800 L 950,550 L 720,550 Z" />
+    <path id="window-upper" d="M 720,530 L 950,530 L 950,300 L 720,300 Z" />
+    <path id="door-entry" d="M 970,800 L 1150,800 L 1150,600 L 970,600 Z" />
+  </g>
+
+  <g id="details" class="detail-line">
+    <!-- Mullions and window divisions -->
+    <path id="mullion-1" d="M 585,800 L 585,550" />
+    <path id="mullion-2" d="M 835,800 L 835,550" />
+    <path id="mullion-3" d="M 835,530 L 835,300" />
+    <path id="mullion-h-1" d="M 470,600 L 700,600" />
+    <path id="mullion-h-2" d="M 720,600 L 950,600" />
+    <!-- Door details -->
+    <path id="door-panel-1" d="M 970,800 L 1060,800 L 1060,600 L 970,600 Z" />
+    <path id="door-panel-2" d="M 1060,800 L 1150,800 L 1150,600 L 1060,600 Z" />
+    <path id="door-handle" d="M 1050,700 L 1050,730 M 1070,700 L 1070,730" />
+    <!-- Railings -->
+    <path id="balcony-rail" d="M 300,500 L 450,500" />
+    <path id="balcony-balusters" d="M 320,530 L 320,500 M 340,530 L 340,500 M 360,530 L 360,500 M 380,530 L 380,500 M 400,530 L 400,500 M 420,530 L 420,500 M 440,530 L 440,500" />
+  </g>
+
+  <g id="landscape" class="secondary-line">
+    <!-- Abstract minimalist tree/bushes -->
+    <path id="tree-1" d="M 200,850 L 200,700 M 170,720 C 150,700 150,650 200,620 C 250,650 250,700 230,720" />
+    <path id="tree-1-detail" class="detail-line" d="M 200,700 L 185,670 M 200,670 L 215,640" />
+    <path id="tree-2" d="M 1350,850 L 1350,600 M 1300,630 C 1260,580 1260,500 1350,450 C 1440,500 1440,580 1400,630" />
+    <path id="tree-2-detail" class="detail-line" d="M 1350,600 L 1320,550 M 1350,550 L 1380,500" />
+  </g>
+
+  <g id="annotations" class="detail-line">
+    <!-- Height dimensions -->
+    <path id="dim-line-1" d="M 140,850 L 140,800 M 135,850 L 145,850 M 135,800 L 145,800" />
+    <path id="dim-line-2" d="M 140,800 L 140,550 M 135,550 L 145,550" />
+    <path id="dim-line-3" d="M 140,550 L 140,300 M 135,300 L 145,300" />
+    <text id="dim-text-1" x="120" y="830" font-family="sans-serif" font-size="12" text-anchor="end" fill="currentColor">0.5m</text>
+    <text id="dim-text-2" x="120" y="680" font-family="sans-serif" font-size="12" text-anchor="end" fill="currentColor">3.2m</text>
+    <text id="dim-text-3" x="120" y="430" font-family="sans-serif" font-size="12" text-anchor="end" fill="currentColor">3.2m</text>
+  </g>
+</svg>
