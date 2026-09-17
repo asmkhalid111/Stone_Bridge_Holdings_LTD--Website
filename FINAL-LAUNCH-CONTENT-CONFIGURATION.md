@@ -12,7 +12,8 @@ This document serves as the authoritative input file for final company and clien
 ---
 
 ## 1. Company Information (Pending)
-- **Official Company Name:** [PLACEHOLDER - Pending Client Supply]
+- **Official Company Name:** Stone Bridge Holdings Limited (Verified internally via PDF)
+- **Managing Director:** Md. Helal Uddin Miah (Verified internally; do not publish public profile yet)
 - **Company Registration Number:** [PLACEHOLDER - Pending Client Supply]
 - **Official Office Address:** [PLACEHOLDER - Pending Client Supply]
 - **Official Switchboard Telephone:** [PLACEHOLDER - Pending Client Supply]

@@ -158,7 +158,7 @@ export const ProjectDrawingViewer: React.FC<ProjectDrawingViewerProps> = ({
           </span>
           <span className="font-semibold text-emerald-600 flex items-center gap-1">
             <CheckCircle2 size={12} strokeWidth={1.25} />
-            <span>VERIFIED CAD</span>
+            <span>{activeDrawing.svgPath ? "VERIFIED CAD" : "NATIVE PDF EXTRACTION"}</span>
           </span>
         </div>
       </div>
@@ -176,10 +176,10 @@ export const ProjectDrawingViewer: React.FC<ProjectDrawingViewerProps> = ({
           aria-hidden="true"
         />
 
-        {/* Vector SVG Image (Preserved sharp vector) */}
+        {/* Vector SVG or Native Raster Image */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={activeDrawing.svgPath}
+          src={activeDrawing.svgPath || activeDrawing.imagePath}
           alt={`${activeDrawing.title} - ${projectTitle}`}
           className="relative z-10 max-w-full h-auto max-h-[700px] object-contain drop-shadow-xs transition-all duration-300"
           loading="eager"
@@ -197,14 +197,14 @@ export const ProjectDrawingViewer: React.FC<ProjectDrawingViewerProps> = ({
             <span>Expand</span>
           </button>
           <a
-            href={activeDrawing.svgPath}
+            href={activeDrawing.svgPath || activeDrawing.imagePath}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-canvas/90 backdrop-blur-xs border border-border text-ink-primary hover:bg-ink-primary hover:text-canvas transition-colors font-mono text-[10px] uppercase tracking-wider shadow-xs"
-            title="Open raw vector SVG in new tab"
+            title="Open raw file in new tab"
           >
             <ExternalLink size={12} strokeWidth={1.5} />
-            <span>Vector File</span>
+            <span>{activeDrawing.svgPath ? "Vector File" : "Raw Image"}</span>
           </a>
         </div>
       </div>
@@ -306,7 +306,7 @@ export const ProjectDrawingViewer: React.FC<ProjectDrawingViewerProps> = ({
 
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={activeDrawing.svgPath}
+              src={activeDrawing.svgPath || activeDrawing.imagePath}
               alt={`${activeDrawing.title} - ${projectTitle} (Expanded)`}
               className="relative z-10 max-w-full max-h-full object-contain drop-shadow-sm select-none"
               loading="eager"
@@ -334,20 +334,20 @@ export const ProjectDrawingViewer: React.FC<ProjectDrawingViewerProps> = ({
                 <span className="text-ink-subtle uppercase text-[9px] block">AUDIT VERIFICATION</span>
                 <span className="text-emerald-600 font-semibold flex items-center gap-1">
                   <CheckCircle2 size={12} strokeWidth={1.25} />
-                  <span>1:1 POSTSCRIPT CAD EXTRACTION</span>
+                  <span>{activeDrawing.svgPath ? "1:1 POSTSCRIPT CAD EXTRACTION" : "NATIVE RASTER EXTRACTION"}</span>
                 </span>
               </div>
             </div>
 
             <div className="flex items-center gap-3">
               <a
-                href={activeDrawing.svgPath}
+                href={activeDrawing.svgPath || activeDrawing.imagePath}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 border border-border bg-canvas text-ink-primary hover:border-ink-primary transition-colors text-[11px] uppercase tracking-wider"
               >
                 <ExternalLink size={13} strokeWidth={1.5} />
-                <span>Open Raw SVG</span>
+                <span>{activeDrawing.svgPath ? "Open Raw SVG" : "Open Raw Image"}</span>
               </a>
             </div>
           </div>

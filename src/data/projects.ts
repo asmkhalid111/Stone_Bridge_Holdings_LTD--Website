@@ -144,6 +144,7 @@ export const PROJECTS: Project[] = [
     title:
       "Proposed G+6 = 07 (Seven) Storied Residential Building Plan (Type A-A3)",
     shortTitle: "G+6 Multi-Family Residential Building",
+    marketingTitle: "Signature: Luxury Duplex Complex",
     category: "Multi-Family Residential",
     typology: "Reinforced Concrete Frame with Shear Core",
     status: "STRUCTURAL WORKING DRAWINGS",
@@ -196,6 +197,30 @@ export const PROJECTS: Project[] = [
     ],
     drawings: [
       {
+        id: "p2-ground-floor",
+        title: "Ground Floor Plan",
+        type: "Architectural Floor Plan",
+        scale: "NTS",
+        imagePath: "/assets/images/project-02/ground-floor-plan.jpeg",
+        description: "Ground floor entry layout featuring 5 parking spaces, guard room, E.M.R room, stair & lift lobby.",
+      },
+      {
+        id: "p2-first-floor",
+        title: "First Floor Plan",
+        type: "Architectural Floor Plan",
+        scale: "NTS",
+        imagePath: "/assets/images/project-02/first-floor-plan.jpeg",
+        description: "First floor duplex layout detailing the living space, dining area, guest bedroom, kitchen, and common space balcony.",
+      },
+      {
+        id: "p2-second-floor",
+        title: "Second Floor Plan",
+        type: "Architectural Floor Plan",
+        scale: "NTS",
+        imagePath: "/assets/images/project-02/second-floor-plan.jpeg",
+        description: "Second floor plan featuring the master bedroom with balcony, child bedroom, store, and entry lobby.",
+      },
+      {
         id: "p2-beam-layout",
         title: "3rd Floor Roof Beam Layout Plan",
         sheetNo: "A-02",
@@ -209,9 +234,46 @@ export const PROJECTS: Project[] = [
           "Structural working drawing Sheet A-02 illustrating the 3rd floor roof beam layout, locating columns C1 through C12, beams FB1 to FB13 (10\"x20\"), cantilever beam CB (10\"x6\"), slab thickness zones (TH=5\", TH=6\"), beam bottom drop slabs, stair shaft (STAIR), lift core (LIFT), and ventilation void (VOID).",
       },
     ],
+    renders: [
+      {
+        id: "p2-render-duplex-lower",
+        title: "Duplex Lower 3D View",
+        imagePath: "/assets/images/project-02/render-duplex-lower.jpeg",
+        type: "Architectural Render",
+        description: "3D visualization of the duplex lower levels (1st, 3rd, 5th floors).",
+      },
+      {
+        id: "p2-render-duplex-upper",
+        title: "Duplex Upper 3D View",
+        imagePath: "/assets/images/project-02/render-duplex-upper.jpeg",
+        type: "Architectural Render",
+        description: "3D visualization of the duplex upper levels (2nd, 4th, 6th floors).",
+      },
+      {
+        id: "p2-render-living",
+        title: "Double Height Living Space",
+        imagePath: "/assets/images/project-02/render-living-double-height.jpeg",
+        type: "Interior Render",
+        description: "Interior 3D visualization showcasing the double height living space.",
+      },
+      {
+        id: "p2-render-master-bed",
+        title: "Master Bedroom",
+        imagePath: "/assets/images/project-02/render-master-bed.jpeg",
+        type: "Interior Render",
+        description: "Interior 3D visualization of the master bedroom suite.",
+      },
+      {
+        id: "p2-render-kitchen",
+        title: "Open Kitchen",
+        imagePath: "/assets/images/project-02/render-kitchen-open.jpeg",
+        type: "Interior Render",
+        description: "Interior 3D visualization of the open kitchen layout.",
+      },
+    ],
     mediaStatus: {
       drawings: true,
-      renders: false,
+      renders: true,
       construction: false,
       completed: false,
     },
@@ -220,6 +282,26 @@ export const PROJECTS: Project[] = [
         label: "Building Storeys",
         value: "G+6 = 07 (Seven) Storeys",
         detail: "Ground level plus six upper residential levels",
+      },
+      {
+        label: "Total Plot Area",
+        value: "3 Katha",
+        detail: "Built over 3 katha plot in Bashundhara R/A",
+      },
+      {
+        label: "Apartment Size",
+        value: "3,724 SFT",
+        detail: "Luxury duplex apartment footprint",
+      },
+      {
+        label: "Parking Capacity",
+        value: "5 NOS",
+        detail: "Numbered ground floor car parking bays",
+      },
+      {
+        label: "Steel Reinforcement",
+        value: "500W Grade Deformed Bar",
+        detail: "BSRM, KSRM, AKS or equivalent high-grade steel",
       },
       {
         label: "Primary Structural Nodes",

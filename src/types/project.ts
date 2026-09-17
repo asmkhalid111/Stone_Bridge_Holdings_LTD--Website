@@ -12,9 +12,18 @@ export interface ProjectDrawing {
   sheetNo?: string;
   type: string;
   scale?: string;
-  svgPath: string;
+  svgPath?: string;
+  imagePath?: string;
   metaPath?: string;
   dimensions?: string;
+  description?: string;
+}
+
+export interface ProjectRender {
+  id: string;
+  title: string;
+  imagePath: string;
+  type: string;
   description?: string;
 }
 
@@ -46,6 +55,7 @@ export interface Project {
   slug: string;
   title: string;
   shortTitle: string;
+  marketingTitle?: string;
   category: string;
   typology: string;
   status:
@@ -66,6 +76,7 @@ export interface Project {
   programArea?: string;
   services: string[];
   drawings: ProjectDrawing[];
+  renders?: ProjectRender[];
   mediaStatus: ProjectMediaStatus;
   technicalSpecifications: ProjectTechnicalSpec[];
   relatedProjectSlugs: string[];

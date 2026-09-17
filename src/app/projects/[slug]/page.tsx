@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { ProjectDrawingViewer } from "@/components/ui/ProjectDrawingViewer";
+import { ProjectRenderGallery } from "@/components/ui/ProjectRenderGallery";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { getAllProjects, getProjectBySlug } from "@/data/projects";
 import { ProjectDetailMotion } from "@/components/animation/ProjectDetailMotion";
@@ -118,7 +119,12 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-ink-primary max-w-5xl mb-6">
-              {project.title}
+              {project.marketingTitle ? (
+                <span className="block font-semibold mb-2">{project.marketingTitle}</span>
+              ) : null}
+              <span className={project.marketingTitle ? "text-xl sm:text-2xl text-ink-secondary block" : ""}>
+                {project.title}
+              </span>
             </h1>
 
             <p className="text-base sm:text-lg text-ink-secondary font-light max-w-3xl leading-relaxed mb-8">
@@ -313,12 +319,22 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             </div>
           </section>
 
-          {/* Section 04: Media Lifecycle Pipeline Indicator */}
+          {/* Section 04: Architectural 3D Visualizations */}
+          {project.renders && project.renders.length > 0 && (
+            <section data-detail-motion="renders" className="mb-20">
+              <ProjectRenderGallery
+                renders={project.renders}
+                projectTitle={project.marketingTitle || project.title}
+              />
+            </section>
+          )}
+
+          {/* Section 05: Media Lifecycle Pipeline Indicator */}
           <section data-detail-motion="lifecycle" className="mb-20">
             <div className="flex items-center justify-between pb-3 mb-6 border-b border-border font-mono text-xs">
               <div className="flex items-center gap-2 text-ink-primary uppercase tracking-wider font-semibold">
                 <span className="w-2 h-2 bg-ink-primary" />
-                <span>04 / COMMISSION MEDIA LIFECYCLE</span>
+                <span>{project.renders && project.renders.length > 0 ? "05" : "04"} / COMMISSION MEDIA LIFECYCLE</span>
               </div>
               <span className="text-[10px] text-ink-muted uppercase">
                 TRANSPARENT STATUS LEDGER
@@ -345,19 +361,29 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               </div>
 
               {/* Stage 2: 3D Visualization Renders */}
-              <div className="p-5 border border-border/80 bg-canvas-subtle/40 relative overflow-hidden">
+              <div className={`p-5 border relative overflow-hidden ${project.mediaStatus.renders ? 'border-emerald-600/40 bg-canvas-elevated' : 'border-border/80 bg-canvas-subtle/40'}`}>
+                {project.mediaStatus.renders && <div className="absolute top-0 left-0 w-full h-1 bg-emerald-600" />}
                 <span className="text-[10px] uppercase tracking-widest text-ink-subtle block mb-1">
                   STAGE 02
                 </span>
                 <span className="text-sm font-bold text-ink-primary block mb-2">
                   3D Architectural Renders
                 </span>
-                <span className="inline-flex items-center gap-1.5 text-ink-muted text-[11px]">
-                  <Clock size={14} strokeWidth={1.5} />
-                  <span>NOT COMMISSIONED</span>
-                </span>
+                {project.mediaStatus.renders ? (
+                  <span className="inline-flex items-center gap-1.5 text-emerald-600 font-semibold text-[11px]">
+                    <CheckCircle2 size={14} strokeWidth={1.5} />
+                    <span>PUBLISHED</span>
+                  </span>
+                ) : (
+                  <span className="inline-flex items-center gap-1.5 text-ink-muted text-[11px]">
+                    <Clock size={14} strokeWidth={1.5} />
+                    <span>NOT COMMISSIONED</span>
+                  </span>
+                )}
                 <p className="mt-3 text-[11px] text-ink-subtle font-sans leading-relaxed">
-                  Structural working drawing phase prioritizes drafting precision over synthetic marketing imagery.
+                  {project.mediaStatus.renders 
+                    ? "Native 3D rendering assets have been authorized and published to the monograph." 
+                    : "Structural working drawing phase prioritizes drafting precision over synthetic marketing imagery."}
                 </p>
               </div>
 
