@@ -4,7 +4,9 @@ An architecture and construction portfolio that uses scroll-driven drawings to r
 
 [Live Netlify preview](https://stonebridgeholdings-website.netlify.app/) · [Project index](https://stonebridgeholdings-website.netlify.app/projects)
 
-![Homepage near the end of the scroll-driven animation, showing the completed architectural elevation and datum annotations](docs/screenshots/homepage-hero.png)
+![Homepage animation showing the architectural elevation taking shape as the visitor scrolls](docs/screenshots/homepage-construction-sequence.gif)
+
+[View the completed elevation as a still image](docs/screenshots/homepage-hero.png)
 
 ## Project case studies
 
@@ -53,7 +55,7 @@ Open [localhost:3000](http://localhost:3000). Run `npm run build` to create a pr
 | [`src/data/projects.ts`](src/data/projects.ts) | Project descriptions and drawing and render records |
 | [`src/components/animation/`](src/components/animation/) | Scroll animation scenes |
 | [`public/assets/`](public/assets/) | SVG drawings and project imagery used by the site |
-| [`docs/screenshots/`](docs/screenshots/) | Screenshots captured from the Netlify preview |
+| [`docs/screenshots/`](docs/screenshots/) | Screenshots and animation recording from the Netlify preview |
 | [`instructions/`](instructions/) | Design briefs, drawing audits, and implementation notes |
 
 ## Launch status
